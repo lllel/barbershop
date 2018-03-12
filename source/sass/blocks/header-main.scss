@@ -1,0 +1,7 @@
+.header-main {
+  //...
+}
+
+.header-main__wrapper {
+  @include wrapper();
+}
