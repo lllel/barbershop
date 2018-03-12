@@ -64,5 +64,8 @@
   "description": "",
   "main": "gulpfile.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "gulp-pug": "^3.3.0"
+  }
 }

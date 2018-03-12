@@ -1,0 +1,20 @@
+mixin mainNav (link, title)
+  li.nav-main__item
+    a.nav-main__link(href= link)= title
+
+mixin slideDescription (title, info)
+  div.slider-description__slide
+    h2.slider-description__title= title
+    p.slider-description__info= info
+
+mixin slideReview (userName, info, img)
+  div.slider-reviews__slide
+    h2.slider-reviews__user-name= userName
+    p.slider-reviews__rewiev= info
+    img.slider-reviews__img(src=img)
+
+mixin newsItem (data, month, info)
+  div.news__container
+    p.news__data= data
+    p.news__month= month
+  p.news__review= info

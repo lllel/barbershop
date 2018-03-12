@@ -72,8 +72,11 @@ gulp.task('html', function () {
 
 // Сборка html из pug для продакшена
 gulp.task('pug', function () {
-  return gulp.src('source/*.pug')
-    .pipe(pug())
+  return gulp.src('source/pug/*.pug')
+    .pipe(plumber())
+    .pipe(pug({
+      pretty: true
+    }))
     .pipe(gulp.dest('build'));
 });
 
@@ -140,7 +143,7 @@ gulp.task('serve', function () {
 
   gulp.watch('source/sass/**/*.{scss,sass}', ['style']);
   gulp.watch('source/*.html', ['html']);
-  gulp.watch('source/*.pug', ['pug']);
+  gulp.watch('source/pug/**/*.pug', ['pug']);
   gulp.watch('source/js/**/*.js', ['jsOptimization']);
 });
 

@@ -1,3 +1,8 @@
+include ../mixins/mixins.pug
+
+block variables
+  - var pageTitle = 'pageTitle'
+
 doctype html
 html(lang='ru')
   head
@@ -6,13 +11,11 @@ html(lang='ru')
     link(rel='preload' href='fonts/PT-Sans-Narrow.woff2' as='font')
     link(rel='preload' href='fonts/PT-Sans-Narrow-Bold.woff2' as='font')
     link(rel='stylesheet' href='css/style.min.css')
-    title Тест pug
+    title #{pageTitle}
   body
-    header.header-main
-      div.header-main__wrapper
+    include ../modules/header-main.pug
 
-    main.main
-      section
-        h2.visually-hidden заголовок
+    block main
 
-    footer.footer-main
+    include ../modules/footer-main.pug
+    include ../modules/scripts.pug
