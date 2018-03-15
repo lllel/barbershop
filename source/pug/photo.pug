@@ -1,0 +1,77 @@
+extends templates/main-template
+
+block variables
+  - pageTitle = 'Главная'
+
+block main
+  section.our-work
+    h1.our-work__title Наши работы
+    article.card.our-work__card.our-work__card--work-month
+      img.card__img(src='#')
+      p.card__feature работа месяца
+      p.card__user-name Лжепётр Мчиславский
+      p.card__info Где я только ни стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!
+      ul.card__items
+        li.card__item
+          img.card__item-img(src='#')
+          span.card__description стрижка
+        li.card__item
+          img.card__item-img(src='#')
+          span.card__description бритьё
+        li.card__item
+          img.card__item-img(src='#')
+          span.card__description усы
+    article.card.our-work__card
+      img.card__img(src='#')
+      p.card__user-name Саша Мальцев
+      p.card__info Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?
+      ul.card__items
+        li.card__item
+          img.card__item-img(src='#')
+          span.card__description стрижка
+    article.card.our-work__card
+      img.card__img(src='#')
+      p.card__user-name Владимир Иваныч
+      p.card__info К зимнему сезону — готов!
+      ul.card__items
+        li.card__item
+          img.card__item-img(src='#')
+          span.card__description борода
+        li.card__item
+          img.card__item-img(src='#')
+          span.card__description усы
+    article.card.our-work__card
+      img.card__img(src='#')
+      p.card__user-name Винстон Синий
+      p.card__info Как только заростаю и волосы начинают мешать видеть — бегом в Бородинский!
+      ul.card__items
+        li.card__item
+          img.card__item-img(src='#')
+          span.card__description стрижка
+  section.price-list
+    h2.price-list__title прейскурант
+    ul.price-list__items
+      li.price-list__item
+        p.price-list__heading Классическая стрижка
+        p.price-list__description (с мытьём головы)
+        p.price-list__price 1 500 руб.
+      li.price-list__item
+        p.price-list__heading Современный вариант
+        p.price-list__description (с мытьём головы)
+        p.price-list__price 1 500 руб.
+      li.price-list__item
+        p.price-list__heading Индивидуальный подход
+        p.price-list__description (с мытьём головы)
+        p.price-list__price 2 000 руб.
+      li.price-list__item
+        p.price-list__heading Бритьё головы
+        p.price-list__description (без мытья)
+        p.price-list__price 500 руб.
+      li.price-list__item
+        p.price-list__heading Бритьё головы
+        p.price-list__description (с мытьём головы)
+        p.price-list__price 1 000 руб.
+    div.price-list__clock
+      p.price-list__time
+        span C 10:00 до 14:00
+        span скидка 20%
