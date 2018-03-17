@@ -178,8 +178,8 @@ gulp.task('images', function () {
 
 // =====================================================================================================================
 
-// npm install babel-polyfill --save-dev
 // npm install gulp-babel babel-cli babel-core babel-preset-es2015 --save-dev
+// npm install babel-polyfill --save-dev
 // npm install eslint eslint-config-htmlacademy --save-dev
 // npm install stylelint stylelint-config-htmlacademy --save-dev
 // npm install svg4everybody
