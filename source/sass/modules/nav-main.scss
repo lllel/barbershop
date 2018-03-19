@@ -1,0 +1,127 @@
+.nav-main {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  background-color: $brown-color-hsl3010180;
+}
+
+.nav-main__items {
+  position: relative;
+  display: none;
+  width: 250px;
+  min-height: 570px;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+  background-color: $brown-color-hs1067756;
+  box-shadow: inset 15px 0 10px -10px $brown-color-hs825841;
+}
+
+.nav-main__item {
+  display: flex;
+  align-items: center;
+  height: 52px;
+  list-style-type: none;
+  border-bottom: 1px solid $brown-color-hs1138463;
+  border-top: 1px solid $brown-color-hs13611091;
+  background-color: $brown-color-hsl3010180;
+  box-shadow: inset 15px 0 15px -9px $brown-color-hs825841;
+
+  &:first-child {
+    border: none;
+  }
+
+  &:last-child {
+    border: none;
+    background-color: transparent;
+  }
+
+  &:last-child a {
+    text-transform: capitalize;
+  }
+}
+
+.nav-main__link {
+  width: 100%;
+  padding: 14px 0 14px 20px;
+  font-size: 18px;
+  font-weight: $font-weight-bold;
+  line-height: 24px;
+  color: $white-color;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav-main__entrance {
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: $white-color;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-main__open-menu {
+  display: block;
+  width: 70px;
+  height: 50px;
+  margin-left: auto;
+  background-color: $brown-color-hs1067756;
+  border: 0;
+  cursor: pointer;
+}
+
+.nav-main__open-menu span {
+  position: relative;
+  display: block;
+  width: 36px;
+  height: 2px;
+  margin: 0 auto;
+  background-color: $white-color;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 0;
+    display: block;
+    width: 36px;
+    height: 2px;
+    background-color: $white-color;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    display: block;
+    width: 36px;
+    height: 2px;
+    background-color: $white-color;
+  }
+}
+
+.nav-main__open-menu.active-menu + .nav-main__items {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-main__open-menu.active-menu span {
+  background-color: transparent;
+
+  &::before {
+    content: "";
+    top: 0;
+    transform: rotate(45deg);
+    background-color: $white-color;
+  }
+
+  &::after {
+    content: "";
+    top: 0;
+    transform: rotate(-45deg);
+    background-color: $white-color;
+  }
+}

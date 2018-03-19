@@ -1,0 +1,23 @@
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.buttons__button {
+  display: flex;
+  flex-direction: row;
+  transform: rotate(45deg);
+}
+
+.buttons__label {
+  display: flex;
+  flex-direction: row;
+  width: 10px;
+  height: 10px;
+  background-color: $white-color;
+  cursor: pointer;
+}

@@ -1,10 +1,10 @@
 @mixin wrapper() {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: $mobile-padding;
+  padding-right: $mobile-padding;
 
   @media (min-width: $tablet-width) {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: $tablet-padding;
+    padding-right: $tablet-padding;
   }
 
   @media (min-width: $desktop-width) {

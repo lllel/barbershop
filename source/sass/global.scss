@@ -7,8 +7,9 @@ html {
 }
 
 body {
-  font-family: "PT Sans Narrow", "Arial", "sans-serif";
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
   min-width: $mobile-width;
+  max-width: 768px;
 }
 
 .visually-hidden {

@@ -5,22 +5,23 @@ block variables
 
 block main
   section.intro
-    h1.intro__title Стрижка у нас это выгодно!
-    p.intro__info Мужская стрижка требует точного подхода. Обратимся к статистике:
-    table.intro__table
-      tr.intro__tr
-        td.intro__price 1 500*
-        td.intro__description рублей вложений
-      tr.intro__tr
-        td.intro__price 7 200
-        td.intro__description секунд времени мастера
-      tr.intro__tr
-        td.intro__price 90 000
-        td.intro__description постриженных волос
-      tr.intro__tr
-        td.intro__price 500 000*
-        td.intro__description лайков и комплиментов
-    p.intro__legend * - приведённые данные ложь
+      h1.intro__title Стрижка у нас это выгодно!
+      p.intro__info Мужская стрижка требует точного подхода. Обратимся к статистике:
+      table.intro__table
+        tr.intro__tr
+          td.intro__price 1 500*
+          td.intro__description рублей вложений
+        tr.intro__tr
+          td.intro__price 7 200
+          td.intro__description секунд
+            span времени мастера
+        tr.intro__tr
+          td.intro__price 90 000
+          td.intro__description постриженных волос
+        tr.intro__tr
+          td.intro__price 500 000*
+          td.intro__description лайков и комплиментов
+      p.intro__legend * — приведённые данные ложь
 
   section.slider-description
     h2.visually-hidden слайдер
@@ -30,13 +31,13 @@ block main
       +slideDescription('дорого', 'Мы делаем свою работу быстро! Два часа пролетят незаметно и Вы — счастливый обладатель стильной стрижки-минутки')
     ul.buttons.slider-description__buttons
       li.buttons__button
-        input#buttons__btn1.buttons__input(type='radio')
+        input#buttons__btn1.buttons__input.visually-hidden(type='radio')
         label.buttons__label(for='buttons__btn1')
       li.buttons__button
-        input#buttons__btn2.buttons__input(type='radio')
+        input#buttons__btn2.buttons__input.visually-hidden(type='radio')
         label.buttons__label(for='buttons__btn2')
       li.buttons__button
-        input#buttons__btn3.buttons__input(type='radio')
+        input#buttons__btn3.buttons__input.visually-hidden(type='radio')
         label.buttons__label(for='buttons__btn3')
 
   section.news

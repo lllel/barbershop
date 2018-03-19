@@ -1,0 +1,25 @@
+.news {
+  position: relative;
+  overflow-x: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-top: 50px solid $grey-color-hsl363636;
+    border-left: 380px solid transparent;
+    border-right: 380px solid transparent;
+    transform: translateX(-50%);
+  }
+}
+
+.news__title {
+  margin-top: 80px;
+  text-align: center;
+  font-size: $font-size-medium;
+  line-height: $line-height-medium-small;
+  text-transform: uppercase;
+}
