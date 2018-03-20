@@ -13,11 +13,16 @@
   transform: rotate(45deg);
 }
 
+.buttons__input:checked + .buttons__label {
+  background-color: $white-color;
+}
+
 .buttons__label {
   display: flex;
   flex-direction: row;
   width: 10px;
   height: 10px;
-  background-color: $white-color;
+  background-color: transparent;
   cursor: pointer;
+  border: 1px solid $grey-color-hsl165165165;
 }

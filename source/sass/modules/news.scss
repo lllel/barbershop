@@ -1,25 +1,79 @@
 .news {
-  position: relative;
-  overflow-x: hidden;
+  padding-bottom: 50px;
+  background-color: $grey-color-hsl248245245;
+  border-bottom: 1px solid $grey-color-hsl229221213;
+}
 
-  &::before {
+.news__title {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.news__review {
+  padding: 0 50px 0 75px;
+  font-size: $font-size-small;
+  line-height: $line-height-medium;
+}
+
+.news__container {
+  position: relative;
+}
+
+.news__data-container {
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: $black-color;
+
+  &::after {
     content: "";
     position: absolute;
-    top: 0;
+    bottom: -10px;
     left: 50%;
+    display: block;
     width: 0;
     height: 0;
-    border-top: 50px solid $grey-color-hsl363636;
-    border-left: 380px solid transparent;
-    border-right: 380px solid transparent;
+    border-top: 10px solid $black-color;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
     transform: translateX(-50%);
   }
 }
 
-.news__title {
-  margin-top: 80px;
+.news__data {
+  margin: 0;
+  padding-top: 3px;
   text-align: center;
   font-size: $font-size-medium;
+  line-height: $line-height-medium-big;
+  font-weight: $font-weight-bold;
+  color: $white-color;
+}
+
+.news__month {
+  margin: 0;
+  text-align: center;
+  font-size: $font-size-any-small;
+  line-height: $line-height-any-small;
+  color: $white-color;
+}
+
+.news__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  min-height: 50px;
+  margin: 0 auto;
+  font-size: $font-size-small;
   line-height: $line-height-medium-small;
+  font-weight: $font-weight-bold;
+  border: 1px solid $grey-color-hsl229221213;
+  color: $black-color;
+  background-color: transparent;
+  text-decoration: none;
   text-transform: uppercase;
 }

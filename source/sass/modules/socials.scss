@@ -1,0 +1,31 @@
+.socials {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0;
+}
+
+.socials__item {
+  width: 33.33%;
+  height: 100px;
+  border: 1px solid $grey-color-hsl626262;
+  list-style-type: none;
+}
+
+.socials__item--vk {
+  background-image: url("../../img/vk-icon-big.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.socials__item--fb {
+  background-image: url("../../img/facebook-icon-big.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.socials__item--in {
+  background-image: url("../../img/insta-icon-big.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}

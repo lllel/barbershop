@@ -31,32 +31,34 @@ block main
       +slideDescription('дорого', 'Мы делаем свою работу быстро! Два часа пролетят незаметно и Вы — счастливый обладатель стильной стрижки-минутки')
     ul.buttons.slider-description__buttons
       li.buttons__button
-        input#buttons__btn1.buttons__input.visually-hidden(type='radio')
+        input#buttons__btn1.buttons__input.visually-hidden(type='radio' name='slider-description' checked)
         label.buttons__label(for='buttons__btn1')
       li.buttons__button
-        input#buttons__btn2.buttons__input.visually-hidden(type='radio')
+        input#buttons__btn2.buttons__input.visually-hidden(type='radio' name='slider-description')
         label.buttons__label(for='buttons__btn2')
       li.buttons__button
-        input#buttons__btn3.buttons__input.visually-hidden(type='radio')
+        input#buttons__btn3.buttons__input.visually-hidden(type='radio' name='slider-description')
         label.buttons__label(for='buttons__btn3')
 
   section.news
-    h2.news__title новости и акции
-    +newsItem('29', 'сент', 'Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.')
-    +newsItem('19', 'сент', 'В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды. Спешите записаться!')
-    button.news__button показать все
+    h2.title.news__title новости и акции
+    div.news__container
+      +newsItem('29', 'сент', 'Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.')
+    div.news__container
+      +newsItem('19', 'сент', 'В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды. Спешите записаться!')
+    a.news__button(href='#') показать все
 
   section.slider-reviews
-    h2.slider-reviews__title отзывы о нас
+    h2.title.slider-reviews__title отзывы о нас
     div.slider-reviews__items
-      +slideReview('Трэвис Баркер', 'Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!', '#')
-    ul.buttons.slider-description__buttons
+      +slideReview('Трэвис Баркер', 'Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!', '../../img/photo1.jpg')
+    ul.buttons.slider-reviews__buttons
       li.buttons__button
-        input#buttons__btn4.buttons__input(type='radio')
+        input#buttons__btn4.buttons__input.visually-hidden(type='radio' name='slider-reviews' checked)
         label.buttons__label(for='buttons__btn4')
       li.buttons__button
-        input#buttons__btn5.buttons__input(type='radio')
+        input#buttons__btn5.buttons__input.visually-hidden(type='radio' name='slider-reviews')
         label.buttons__label(for='buttons__btn5')
       li.buttons__button
-        input#buttons__btn6.buttons__input(type='radio')
+        input#buttons__btn6.buttons__input.visually-hidden(type='radio' name='slider-reviews')
         label.buttons__label(for='buttons__btn6')

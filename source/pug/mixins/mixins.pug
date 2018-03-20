@@ -10,11 +10,11 @@ mixin slideDescription (title, info)
 mixin slideReview (userName, info, img)
   div.slider-reviews__slide
     h2.slider-reviews__user-name= userName
-    p.slider-reviews__rewiev= info
-    img.slider-reviews__img(src=img)
+    p.slider-reviews__review= info
+    img.slider-reviews__img(src=img width='50' height='47')
 
-mixin newsItem (data, month, info)
-  div.news__container
-    p.news__data= data
+mixin newsItem (dataNum, month, info)
+  div.news__data-container
+    p.news__data= dataNum
     p.news__month= month
   p.news__review= info

@@ -1,12 +1,28 @@
 .slider-description {
+  position: relative;
   background-color: $grey-color-hsl363636;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid $grey-color-hsl363636;
+    border-left: 380px solid transparent;
+    border-right: 380px solid transparent;
+    transform: translateX(-50%);
+  }
 }
 
 .slider-description__title {
   margin: 0;
+  padding-top: 150px;
   text-align: center;
   font-size: $font-size-medium;
-  line-height: $line-height-medium;
+  line-height: $line-height-big;
   text-transform: uppercase;
   color: $white-color;
 }
@@ -15,16 +31,27 @@
   text-align: center;
   padding: 0 29px;
   font-size: $font-size-medium-small;
-  line-height: $line-height-medium-small;
+  line-height: $line-height-medium-big;
   color: $white-color;
 }
 
 .slider-description__slide {
   display: none;
-  padding-top: 150px;
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-position: center 30px;
 
   &:nth-child(1) {
     display: block;
+    background-image: url("../../img/scissors.svg");
+  }
+
+  &:nth-child(2) {
+    background-image: url("../../img/chair.svg");
+  }
+
+  &:nth-child(3) {
+    background-image: url("../../img/thing.svg");
   }
 }
 

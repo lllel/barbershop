@@ -3,8 +3,18 @@
 }
 
 .header-main__logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   height: 85px;
   background-color: $grey-color-hsl363636;
+}
+
+.header-main__logo-img {
+  width: 230px;
+  height: 30px;
+  fill: $white-color;
 }
 
 .header-main__wrapper {

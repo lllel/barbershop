@@ -1,26 +1,15 @@
-.footer-main {
-  background-color: $grey-color-hsl414141;
+.produced {
+  padding-bottom: 30px;
 }
 
-.footer-main__title {
-  margin: 0;
-  padding-top: 50px;
+.produced__title {
   text-align: center;
   font-size: $font-size-small;
-  line-height: $line-height-any-small;
-  font-weight: $font-weight-bold;
+  line-height: $line-height-medium;
   color: $white-color;
 }
 
-.footer-main__way {
-  padding: 0 50px;
-  text-align: center;
-  font-size: $font-size-small;
-  line-height: $line-height-any-small;
-  color: $white-color;
-}
-
-.footer-main__tel {
+.produced__organization {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -32,4 +21,6 @@
   line-height: $line-height-medium;
   font-weight: $font-weight-bold;
   color: $white-color;
+  text-transform: uppercase;
+  text-decoration: none;
 }
