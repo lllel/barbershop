@@ -77,3 +77,41 @@
   text-decoration: none;
   text-transform: uppercase;
 }
+
+@media (min-width: $tablet-width) {
+  .news {
+    padding-top: 100px;
+  }
+
+  .news__wrapper {
+    @include wrapper();
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .news__button {
+    width: 160px;
+    margin: 0;
+    order: 2;
+  }
+
+  .news__container {
+    width: 50%;
+    order: 3;
+  }
+
+  .news__title {
+    width: 50%;
+    padding-top: 0;
+    order: 1;
+    text-align: left;
+  }
+
+  .news__review {
+    padding-right: 0;
+  }
+}

@@ -1,15 +1,21 @@
 header.header-main
   div.header-main__logo
-    svg(width='230' height='30')
-      use.header-main__logo-img(xlink:href='#icon-logo-mobile')
+    div.header-main__wrapper
+      a.header-main__logo-link(href='index.html')
+        svg.header-main__logo-mobile(width='230' height='30' aria-label="Логотип Барбершоп")
+          use.header-main__logo-img(xlink:href='#icon-logo-mobile')
+        svg.header-main__logo-tablet(width='372' height='104' aria-label="Логотип Барбершоп")
+          use.header-main__logo-img(xlink:href='#icon-logo-tablet')
   nav.nav-main.header-main__nav
-    button.nav-main__open-menu
-      span
-    ul.nav-main__items
-      +mainNav('#', 'главная')
-      +mainNav('#', 'наши работы')
-      +mainNav('#', 'записаться')
-      +mainNav('#', 'html academy')
-      li.nav-main__item
-        a.nav-main__link(href='#')
-          button.nav-main__entrance Вход
+    div.header-main__wrapper
+      button.nav-main__open-menu
+        span
+      ul.nav-main__items
+        +mainNav('#', 'главная')
+        +mainNav('#', 'наши работы')
+        +mainNav('#', 'записаться')
+        +mainNav('#', 'html academy')
+        li.nav-main__item
+          a.nav-main__entrance(href='#')
+            img(src='../../img/login.png')
+          | Вход

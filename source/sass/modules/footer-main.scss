@@ -32,4 +32,50 @@
   line-height: $line-height-medium;
   font-weight: $font-weight-bold;
   color: $white-color;
+
+  & span {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .footer-main__wrapper {
+    @include wrapper();
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .footer-main__address {
+    width: 320px;
+  }
+
+  .footer-main__title {
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  .footer-main__way {
+    padding: 0;
+    text-align: left;
+  }
+
+  .footer-main__tel {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-weight: $font-weight-regular;
+
+    & span {
+      display: inline;
+    }
+  }
+
+  .footer-main__socials {
+    order: 3;
+    padding-bottom: 50px;
+  }
 }

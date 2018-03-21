@@ -1,12 +1,21 @@
 footer.footer-main
-  div.footer-main__address
-    h3.footer-main__title Барбершоп Бородинский
-    p.footer-main__way г. Санкт-Петербург, ул. Большая Конюшенная 19/8
-  p.footer-main__tel +7 (812) 555-66-66
-  ul.socials.footer-main__socials
-    li.socials__item.socials__item--vk
-    li.socials__item.socials__item--fb
-    li.socials__item.socials__item--in
-  div.produced
-    p.produced__title Разработано:
-    a.produced__organization(href='#') html academy
+  div.footer-main__wrapper
+    div.footer-main__address
+      h3.footer-main__title Барбершоп Бородинский
+      p.footer-main__way г. Санкт-Петербург, ул. Большая Конюшенная 19/8
+      p.footer-main__tel
+        span Тел.:
+        |  +7 (812) 555-66-66
+    ul.socials.footer-main__socials
+      li.socials__item.socials__item--vk
+        a.socials__item__link(href='#')
+          span.visually-hidden Переход вконтакт
+      li.socials__item.socials__item--fb
+        a.socials__item__link(href='#')
+          span.visually-hidden Переход в фэйсбук
+      li.socials__item.socials__item--in
+        a.socials__item__link(href='#')
+          span.visually-hidden Переход в инстаграм
+    div.produced.footer-main__produced
+      p.produced__title Разработано:
+      a.produced__organization(href='#') html academy

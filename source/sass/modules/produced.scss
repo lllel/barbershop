@@ -24,3 +24,14 @@
   text-transform: uppercase;
   text-decoration: none;
 }
+
+@media (min-width: $tablet-width) {
+  .produced {
+    width: 160px;
+    padding-bottom: 30px;
+  }
+
+  .produced__organization {
+    width: 160px;
+  }
+}

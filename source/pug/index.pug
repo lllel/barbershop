@@ -5,8 +5,12 @@ block variables
 
 block main
   section.intro
-      h1.intro__title Стрижка у нас это выгодно!
-      p.intro__info Мужская стрижка требует точного подхода. Обратимся к статистике:
+    div.intro__wrapper
+      div.intro__ad
+        h1.intro__title Стрижка у нас это выгодно!
+        p.intro__info Мужская стрижка требует точного подхода. Обратимся к статистике:
+        p.intro__legend-top * — приведённые данные ложь
+    div.intro__wrapper
       table.intro__table
         tr.intro__tr
           td.intro__price 1 500*
@@ -21,14 +25,14 @@ block main
         tr.intro__tr
           td.intro__price 500 000*
           td.intro__description лайков и комплиментов
-      p.intro__legend * — приведённые данные ложь
+    p.intro__legend-bottom * — приведённые данные ложь
 
   section.slider-description
     h2.visually-hidden слайдер
     div.slider-description__items
       +slideDescription('быстро', 'Мы делаем свою работу быстро! Два часа пролетят незаметно и Вы — счастливый обладатель стильной стрижки-минутки')
-      +slideDescription('круто', 'Мы делаем свою работу быстро! Два часа пролетят незаметно и Вы — счастливый обладатель стильной стрижки-минутки')
-      +slideDescription('дорого', 'Мы делаем свою работу быстро! Два часа пролетят незаметно и Вы — счастливый обладатель стильной стрижки-минутки')
+      +slideDescription('круто', 'Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино. Во всяком случае внешне.')
+      +slideDescription('дорого', 'Наши мастера — профессионалы своего делаи не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?')
     ul.buttons.slider-description__buttons
       li.buttons__button
         input#buttons__btn1.buttons__input.visually-hidden(type='radio' name='slider-description' checked)
@@ -41,24 +45,29 @@ block main
         label.buttons__label(for='buttons__btn3')
 
   section.news
-    h2.title.news__title новости и акции
-    div.news__container
-      +newsItem('29', 'сент', 'Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.')
-    div.news__container
-      +newsItem('19', 'сент', 'В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды. Спешите записаться!')
-    a.news__button(href='#') показать все
+    div.news__wrapper
+      h2.title.news__title новости и акции
+      div.news__container
+        +newsItem('29', 'сент', 'Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.')
+      div.news__container
+        +newsItem('19', 'сент', 'В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды. Спешите записаться!')
+      a.news__button(href='#') показать все
 
   section.slider-reviews
-    h2.title.slider-reviews__title отзывы о нас
-    div.slider-reviews__items
-      +slideReview('Трэвис Баркер', 'Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!', '../../img/photo1.jpg')
-    ul.buttons.slider-reviews__buttons
-      li.buttons__button
-        input#buttons__btn4.buttons__input.visually-hidden(type='radio' name='slider-reviews' checked)
-        label.buttons__label(for='buttons__btn4')
-      li.buttons__button
-        input#buttons__btn5.buttons__input.visually-hidden(type='radio' name='slider-reviews')
-        label.buttons__label(for='buttons__btn5')
-      li.buttons__button
-        input#buttons__btn6.buttons__input.visually-hidden(type='radio' name='slider-reviews')
-        label.buttons__label(for='buttons__btn6')
+    div.slider-reviews__wrapper
+      h2.title.slider-reviews__title отзывы о нас
+      a.slider-reviews__write-review(href='#') оставить свой
+      div.slider-reviews__items
+        +slideReview('Трэвис Баркер', 'Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!', '../../img/photo1.jpg')
+        button.slider-reviews__button-arrow.slider-reviews__button-arrow--prev
+        button.slider-reviews__button-arrow.slider-reviews__button-arrow--next
+      ul.buttons.slider-reviews__buttons
+        li.buttons__button
+          input#buttons__btn4.buttons__input.visually-hidden(type='radio' name='slider-reviews' checked)
+          label.buttons__label(for='buttons__btn4')
+        li.buttons__button
+          input#buttons__btn5.buttons__input.visually-hidden(type='radio' name='slider-reviews')
+          label.buttons__label(for='buttons__btn5')
+        li.buttons__button
+          input#buttons__btn6.buttons__input.visually-hidden(type='radio' name='slider-reviews')
+          label.buttons__label(for='buttons__btn6')
