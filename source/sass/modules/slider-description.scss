@@ -87,3 +87,34 @@
     text-align: left;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .slider-description__items {
+    display: flex;
+    flex-direction: row;
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .slider-description__slide {
+    padding: 150px 38px 0;
+    background-position: center 50px;
+  }
+
+  .slider-description__item {
+    width: 33.33%;
+  }
+
+  .slider-description__title {
+    text-align: center;
+  }
+
+  .slider-description__info {
+    padding: 0;
+    text-align: center;
+  }
+
+  .slider-description__buttons {
+    display: none;
+  }
+}

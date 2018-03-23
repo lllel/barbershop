@@ -1,5 +1,10 @@
+.intro__wrapper {
+  background-color: $white-color;
+}
+
 .intro__title {
   padding: 0 70px;
+  margin: 0;
   text-align: center;
   font-size: $font-size-medium;
   line-height: $line-height-big;
@@ -7,6 +12,7 @@
 
 .intro__info {
   padding: 0 30px;
+  margin: 0;
   text-align: center;
   font-size: $font-size-medium-small;
   line-height: $line-height-medium-big;
@@ -132,7 +138,61 @@
 
   .intro__tr {
     width: 50%;
-    height: 160px;
+    min-height: 160px;
+    height: auto;
     padding-left: 35px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .intro {
+    display: flex;
+    flex-direction: row;
+    width: 960px;
+    margin: -158px auto 0;
+  }
+
+  .intro__table {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .intro__tr {
+    height: auto;
+  }
+
+  .intro__wrapper {
+    &:first-child {
+      display: flex;
+      flex-direction: row;
+      width: 33.33%;
+      padding: 0;
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      display: flex;
+      flex-direction: row;
+      width: 66.66%;
+      padding: 0;
+      background-color: transparent;
+    }
+  }
+
+  .intro__ad {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .intro__title {
+    width: auto;
+  }
+
+  .intro__info {
+    width: auto;
+  }
+
+  .intro__legend-top {
+    text-align: left;
   }
 }

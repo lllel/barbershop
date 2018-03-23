@@ -9,7 +9,8 @@ html {
 body {
   font-family: "PT Sans Narrow", "Arial", sans-serif;
   min-width: $mobile-width;
-  max-width: 1150px;
+  margin: 0 auto;
+  background-color: $grey-color-hsl535353;
 }
 
 .visually-hidden {

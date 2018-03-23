@@ -16,7 +16,8 @@
   background-color: $grey-color-hsl363636;
 }
 
-.header-main__logo-tablet {
+.header-main__logo-tablet,
+.header-main__logo-desktop {
   display: none;
 }
 
@@ -62,5 +63,24 @@
     display: block;
     width: 372px;
     height: 104px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header-main__wrapper {
+    width: 960px;
+  }
+
+  .header-main__logo {
+    height: 650px;
+    background-image: url("../../img/bg-desktop.jpg");
+  }
+
+  .header-main__logo-tablet {
+    display: none;
+  }
+
+  .header-main__logo-desktop {
+    display: block;
   }
 }

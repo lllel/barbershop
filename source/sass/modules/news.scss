@@ -17,6 +17,12 @@
 
 .news__container {
   position: relative;
+  display: none;
+
+  &:nth-child(2),
+  &:nth-child(3) {
+    display: block;
+  }
 }
 
 .news__data-container {
@@ -113,5 +119,27 @@
 
   .news__review {
     padding-right: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .news__wrapper {
+    width: 960px;
+    padding: 0;
+  }
+
+  .news__container {
+    display: block;
+    width: 33.33%;
+  }
+
+  .news__title {
+    width: calc(100% - 160px);
+    padding-left: 100px;
+  }
+
+  .news__review {
+    padding-right: 30px;
+    margin: 0;
   }
 }
