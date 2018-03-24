@@ -1,0 +1,113 @@
+.card {
+  width: 280px;
+  margin: 0 auto;
+  outline: 1px solid $grey-color-hsl230222215;
+}
+
+.card__img-container {
+  position: relative;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.card__img {
+  display: block;
+  width: 280px;
+  height: 177px;
+  margin: 0 auto;
+}
+
+.card__img--our-work {
+  width: 280px;
+  height: 480px;
+  margin: 0 auto;
+}
+
+.card__feature-container {
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  width: 169px;
+  height: 50px;
+  background-color: $brown-color-hsl3010180;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -7px;
+    width: 0;
+    height: 0;
+    border-top: 25px solid $brown-color-hsl3010180;
+    border-right: 7px solid transparent;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -7px;
+    width: 0;
+    height: 0;
+    border-bottom: 25px solid $brown-color-hsl3010180;
+    border-right: 7px solid transparent;
+  }
+}
+
+.card__feature {
+  margin: auto;
+  font-size: $font-size-medium-small;
+  line-height: $line-height-medium;
+  font-weight: $font-weight-bold;
+  color: $white-color;
+  text-transform: uppercase;
+}
+
+.card__user-item {
+  width: 280px;
+  margin: 0 auto;
+  padding-left: 25px;
+}
+
+.card__user-name {
+  font-size: $font-size-medium-small-2;
+  line-height: $line-height-medium;
+  font-weight: $font-weight-bold;
+  color: $black-color;
+}
+
+.card__info {
+  font-size: $font-size-small;
+  line-height: $line-height-medium;
+  color: $black-color;
+}
+
+.card__items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.card__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 50%;
+
+  svg {
+    fill: $brown-color-hsl3010180;
+  }
+}
+
+.card__description {
+  font-size: $font-size-any-small;
+  line-height: $line-height-medium;
+  color: $black-color;
+  text-transform: uppercase;
+}

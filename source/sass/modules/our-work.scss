@@ -1,0 +1,28 @@
+.our-work {
+  position: relative;
+  padding-bottom: 15px;
+  background-color: $grey-color-hsl248245245;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 30px solid $grey-color-hsl248245245;
+    border-left: 48vw solid transparent;
+    border-right: 47vw solid transparent;
+    transform: translateX(-50%);
+    z-index: 9;
+  }
+}
+
+.our-work__card--work-month {
+  position: relative;
+}
+
+.our-work__title {
+  text-align: center;
+}
