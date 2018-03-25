@@ -111,3 +111,41 @@
   color: $black-color;
   text-transform: uppercase;
 }
+
+@media (min-width: $tablet-width) {
+  .card {
+    display: flex;
+    flex-direction: row;
+    width: 640px;
+    height: 295px;
+  }
+
+  .card__img-container {
+    margin: 0;
+  }
+
+  .card__img {
+    width: 270px;
+    height: 295px;
+    margin: 0;
+
+    &--our-work {
+      width: 270px;
+      height: 480px;
+      margin: 0;
+    }
+  }
+
+  .card__user-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card__items {
+    margin-top: auto;
+  }
+
+  .card__feature-container {
+    top: 50px;
+  }
+}
