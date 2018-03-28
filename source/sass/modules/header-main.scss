@@ -73,6 +73,7 @@
 @media (min-width: $desktop-width) {
   .header-main__wrapper {
     width: 960px;
+    padding: 0;
   }
 
   .header-main__logo {
@@ -86,5 +87,9 @@
 
   .header-main__logo-desktop {
     display: block;
+  }
+
+  .header-main__logo--small-height {
+    height: 308px;
   }
 }

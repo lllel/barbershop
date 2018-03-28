@@ -19,6 +19,21 @@
   }
 }
 
+.our-work__button {
+  display: none;
+  width: 160px;
+  min-height: 50px;
+  margin: 0 auto;
+  font-size: $font-size-small;
+  line-height: $line-height-medium-small;
+  font-weight: $font-weight-bold;
+  border: 1px solid $grey-color-hsl229221213;
+  color: $black-color;
+  background-color: transparent;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 .our-work__card--work-month {
   position: relative;
 }
@@ -45,5 +60,43 @@
 
   .our-work__card--work-month {
     height: 480px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .our-work {
+    &::after {
+      content: "";
+      border-top: 30px solid $grey-color-hsl248245245;
+      border-left: 49vw solid transparent;
+      border-right: 49vw solid transparent;
+    }
+  }
+
+  .our-work__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .our-work__card--work-month {
+    flex-direction: row;
+    width: 100%;
+    padding-right: 80px;
+  }
+
+  .our-work__title {
+    text-align: left;
+  }
+
+  .our-work__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
   }
 }
