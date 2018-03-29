@@ -3,9 +3,12 @@ extends templates/main-template
 block variables
   - pageTitle = 'Форма'
 
+block vars
+  - headerMainLogo = 'header-main__logo--small-height'
+
 block main
   form.form-main(action='#' method='POST')
-    h1.form-main__title запись на стрижку
+    h1.title.form-main__title запись на стрижку
     div.form-main__user-name
       p.user-name.form-main__item
         input#surname.user-name__input(type='text' name='surname' placeholder='Фамилия')
@@ -30,38 +33,52 @@ block main
           span.visually-hidden текст
       textarea.textarea.form-main__item(name='textarea' placeholder='Доп. информация для мастера')
     div.form-main__radio
-      p.model.form-main__item
-        input#radio1.model__input(type='radio' name='radio')
-        label.model__label(for='radio1') адмирал
-      p.model.form-main__item
-        input#radio2.model__input(type='radio' name='radio')
-        label.model__label(for='radio2') лесоруб
-      p.model.form-main__item
-        input#radio3.model__input(type='radio' name='radio')
-        label.model__label(for='radio3') полярник
-      p.model.form-main__item
-        input#radio4.model__input(type='radio' name='radio')
-        label.model__label(for='radio4') боярин
-      p.model.form-main__item
-        input#radio5.model__input(type='radio' name='radio')
-        label.model__label(for='radio5') мудрец
+      div.form-main__wrapper
+        h2.form-main__heading выберите модель бороды:
+        p.model.form-main__item
+          input#radio1.visually-hidden(type='radio' name='radio')
+          label.model__label(for='radio1') адмирал
+          svg(width='54' height='50' aria-label='Иконка - борода')
+            use.model__icon(xlink:href='#icon-beard-1')
+        p.model.form-main__item
+          input#radio2.visually-hidden(type='radio' name='radio')
+          label.model__label(for='radio2') лесоруб
+          svg(width='54' height='50' aria-label='Иконка - борода')
+            use.model__icon(xlink:href='#icon-beard-2')
+        p.model.form-main__item
+          input#radio3.visually-hidden(type='radio' name='radio')
+          label.model__label(for='radio3') полярник
+          svg(width='54' height='50' aria-label='Иконка - борода')
+            use.model__icon(xlink:href='#icon-beard-3')
+        p.model.form-main__item
+          input#radio4.visually-hidden(type='radio' name='radio')
+          label.model__label(for='radio4') боярин
+          svg(width='54' height='50' aria-label='Иконка - борода')
+            use.model__icon(xlink:href='#icon-beard-4')
+        p.model.form-main__item
+          input#radio5.visually-hidden(type='radio' name='radio')
+          label.model__label(for='radio5') мудрец
+          svg(width='54' height='50' aria-label='Иконка - борода')
+            use.model__icon(xlink:href='#icon-beard-5')
     div.footer-main__checkbox
-      p.service.form-main__item
-        input#checkbox1.service__input(type='checkbox' name='checkbox1')
-        label.service__label(for='checkbox1') Подкрасить бороду
-      p.service.form-main__item
-        input#checkbox2.service__input(type='checkbox' name='checkbox2')
-        label.service__label(for='checkbox2') Накрутить усы
-      p.service.form-main__item
-        input#checkbox3.service__input(type='checkbox' name='checkbox3')
-        label.service__label(for='checkbox3') Причесать бороду
-      p.service.form-main__item
-        input#checkbox4.service__input(type='checkbox' name='checkbox4')
-        label.service__label(for='checkbox4') Подровнять виски
-      p.service.form-main__item
-        input#checkbox5.service__input(type='checkbox' name='checkbox5')
-        label.service__label(for='checkbox5') Убрать седину
-      p.service.form-main__item
-        input#checkbox6.service__input(type='checkbox' name='checkbox6')
-        label.service__label(for='checkbox6') Отпролировать лысину
+      div.form-main__wrapper
+        div.form-main__heading дополнительные услуги:
+        p.service.form-main__item
+          input#checkbox1.visually-hidden(type='checkbox' name='checkbox1')
+          label.service__label(for='checkbox1') Подкрасить бороду
+        p.service.form-main__item
+          input#checkbox2.visually-hidden(type='checkbox' name='checkbox2')
+          label.service__label(for='checkbox2') Накрутить усы
+        p.service.form-main__item
+          input#checkbox3.visually-hidden(type='checkbox' name='checkbox3')
+          label.service__label(for='checkbox3') Причесать бороду
+        p.service.form-main__item
+          input#checkbox4.visually-hidden(type='checkbox' name='checkbox4')
+          label.service__label(for='checkbox4') Подровнять виски
+        p.service.form-main__item
+          input#checkbox5.visually-hidden(type='checkbox' name='checkbox5')
+          label.service__label(for='checkbox5') Убрать седину
+        p.service.form-main__item
+          input#checkbox6.visually-hidden(type='checkbox' name='checkbox6')
+          label.service__label(for='checkbox6') Отпролировать лысину
     button.form-main__submit(type='submit') отправить заявку

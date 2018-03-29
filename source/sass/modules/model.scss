@@ -1,0 +1,23 @@
+.model {
+  width: 33.33%;
+}
+
+.model__label {
+  font-size: $font-size-small;
+  line-height: $line-height-medium-small;
+  color: $black-color;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid $grey-color-hsl229221213;
+    border-radius: 50%;
+    background-color: $white-color;
+  }
+}
+
+.model__icon {
+  fill: $brown-color-hsl3010180;
+}

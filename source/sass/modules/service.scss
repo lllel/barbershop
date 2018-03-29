@@ -1,0 +1,17 @@
+.service {
+  &::before {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 35px;
+    border: 1px solid $grey-color-hsl229221213;
+    background-color: $white-color;
+  }
+}
+
+.service__label {
+  padding-left: 25px;
+  font-size: $font-size-small;
+  line-height: $line-height-medium-big;
+  color: $black-color;
+}
