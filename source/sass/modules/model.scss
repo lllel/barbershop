@@ -21,3 +21,13 @@
 .model__icon {
   fill: $brown-color-hsl3010180;
 }
+
+@media (min-width: $tablet-width) {
+  .model {
+    width: 20%;
+  }
+
+  .model__label {
+    font-size: $font-size-medium-small-2;
+  }
+}

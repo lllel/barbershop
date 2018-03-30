@@ -22,7 +22,7 @@
   padding-top: 150px;
   text-align: center;
   font-size: $font-size-medium;
-  line-height: $line-height-big;
+  line-height: $line-height-medium-big;
   text-transform: uppercase;
   color: $white-color;
 }
@@ -112,6 +112,7 @@
   .slider-description__info {
     padding: 0;
     text-align: center;
+    line-height: $line-height-medium-big;
   }
 
   .slider-description__buttons {

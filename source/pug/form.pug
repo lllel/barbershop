@@ -8,33 +8,36 @@ block vars
 
 block main
   form.form-main(action='#' method='POST')
-    h1.title.form-main__title запись на стрижку
-    div.form-main__user-name
-      p.user-name.form-main__item
-        input#surname.user-name__input(type='text' name='surname' placeholder='Фамилия')
-        label.visually-hidden(for='surname')
-          span.visually-hidden текст
-      p.user-name.form-main__item
-        input#name.user-name__input(type='text' name='name' placeholder='Имя')
-        label.visually-hidden(for='name')
-          span.visually-hidden текст
-      p.user-name.form-main__item
-        input#patronymic.user-name__input(type='text' name='patronymic' placeholder='Отчество')
-        label.visually-hidden(for='patronymic')
-          span.visually-hidden текст
-    div.form-main__contacts
-      p.contacts.form-main__item
-        input#phone.contacts__input(type='tel' name='phone' placeholder='Контактный телефон')
-        label.visually-hidden(for='phone')
-          span.visually-hidden текст
-      p.contacts.form-main__item
-        input#email.contacts__input(type='email' name='email' placeholder='Контактный e-mail')
-        label.visually-hidden(for='email')
-          span.visually-hidden текст
+    div.form-main__wrapper
+      div.form-main__container
+        h1.title.form-main__title запись на стрижку
+        a.form-main__button на главную
+      div.form-main__user-name
+        p.user-name.form-main__item
+          input#surname.user-name__input(type='text' name='surname' placeholder='Фамилия')
+          label.visually-hidden(for='surname')
+            span.visually-hidden текст
+        p.user-name.form-main__item
+          input#name.user-name__input(type='text' name='name' placeholder='Имя')
+          label.visually-hidden(for='name')
+            span.visually-hidden текст
+        p.user-name.form-main__item
+          input#patronymic.user-name__input(type='text' name='patronymic' placeholder='Отчество')
+          label.visually-hidden(for='patronymic')
+            span.visually-hidden текст
+      div.form-main__contacts
+        p.contacts.form-main__item
+          input#phone.contacts__input(type='tel' name='phone' placeholder='Контактный телефон')
+          label.visually-hidden(for='phone')
+            span.visually-hidden текст
+        p.contacts.form-main__item
+          input#email.contacts__input(type='email' name='email' placeholder='Контактный e-mail')
+          label.visually-hidden(for='email')
+            span.visually-hidden текст
       textarea.textarea.form-main__item(name='textarea' placeholder='Доп. информация для мастера')
     div.form-main__radio
+      h2.form-main__heading выберите модель бороды:
       div.form-main__wrapper
-        h2.form-main__heading выберите модель бороды:
         p.model.form-main__item
           input#radio1.visually-hidden(type='radio' name='radio')
           label.model__label(for='radio1') адмирал
@@ -60,9 +63,9 @@ block main
           label.model__label(for='radio5') мудрец
           svg(width='54' height='50' aria-label='Иконка - борода')
             use.model__icon(xlink:href='#icon-beard-5')
-    div.footer-main__checkbox
+    div.form-main__checkbox
+      h2.form-main__heading дополнительные услуги:
       div.form-main__wrapper
-        div.form-main__heading дополнительные услуги:
         p.service.form-main__item
           input#checkbox1.visually-hidden(type='checkbox' name='checkbox1')
           label.service__label(for='checkbox1') Подкрасить бороду

@@ -1,5 +1,6 @@
 block vars
   - var headerMainLogo = '';
+  // - var currentHref = '';
 
 header.header-main
   div(class=`header-main__logo ${headerMainLogo}`)
@@ -13,7 +14,7 @@ header.header-main
           use.header-main__logo-img(xlink:href='#icon-logo-desktop')
   nav.nav-main.header-main__nav
     div.header-main__wrapper
-      button.nav-main__open-menu
+      button.nav-main__open-menu.active-menu
         span
       ul.nav-main__items
         +mainNav('index.html', 'главная')
@@ -23,4 +24,4 @@ header.header-main
         li.nav-main__item
           a.nav-main__login(href='#')
             img(src='../../img/login.png')
-          | Вход
+            | Вход

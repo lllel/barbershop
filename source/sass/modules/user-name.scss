@@ -1,6 +1,6 @@
 .user-name__input {
   display: block;
-  width: 85%;
+  width: 100%;
   padding: 10px;
   margin: 0 auto;
   border: 1px solid $grey-color-hsl229221213;
@@ -13,5 +13,27 @@
     font-size: $font-size-small;
     line-height: $line-height-medium-big;
     color: $black-color;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .user-name {
+    width: 33.33%;
+  }
+
+  .user-name__input {
+    font-size: $font-size-medium-small-2;
+    line-height: $line-height-medium-big;
+
+    &::placeholder {
+      font-size: $font-size-medium-small-2;
+      line-height: $line-height-medium-big;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user-name {
+    width: 295px;
   }
 }

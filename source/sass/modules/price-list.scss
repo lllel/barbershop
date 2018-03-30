@@ -105,6 +105,18 @@
 }
 
 @media (min-width: $tablet-width) {
+  .price-list {
+    &::after {
+      content: "";
+      display: none;
+    }
+  }
+
+  .price-list__title {
+    font-size: $font-size-big;
+    line-height: $line-height-any-big;
+  }
+
   .price-list__items {
     display: table;
     border-collapse: collapse;
@@ -122,11 +134,14 @@
     width: auto;
     padding: 0;
     text-align: left;
+    line-height: $line-height-medium;
     border: 1px solid $grey-color-hsl747474;
   }
 
   .price-list__time span {
     text-transform: uppercase;
+    font-size: $font-size-medium;
+    line-height: $line-height-medium-big;
 
     &:first-child {
       display: inline;
@@ -178,6 +193,8 @@
 
     span {
       text-transform: none;
+      font-size: $font-size-medium-small;
+      line-height: $line-height-medium;
     }
   }
 }

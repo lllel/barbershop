@@ -1,4 +1,5 @@
 $mobile-width: 320px;
+$only-mobile-width: 767px;
 $tablet-width: 768px;
 $desktop-width: 1200px;
 
@@ -28,7 +29,7 @@ $brown-color-hs1138463: #71543f;
 $brown-color-hs825841: #503929;
 $brown-color-hs1067756: #6a4d38;
 
-$font-size-very-big: 1px;
+$font-size-very-big: 72px;
 $font-size-any-biggest: 1px;
 $font-size-biggest: 1px;
 $font-size-any-big: 1px;
@@ -45,9 +46,9 @@ $font-size-any-smallest: 13px;
 $font-weight-regular: 400;
 $font-weight-bold: 700;
 
-$line-height-any-biggest: 1px;
+$line-height-any-biggest: 72px;
 $line-height-biggest: 1px;
-$line-height-any-big: 1px;
+$line-height-any-big: 40px;
 $line-height-big: 32px;
 $line-height-medium-big: 30px;
 $line-height-medium: 27px;

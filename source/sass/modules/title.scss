@@ -4,3 +4,10 @@
   line-height: $line-height-medium-big;
   text-transform: uppercase;
 }
+
+@media (min-width: $tablet-width) {
+  .title {
+    font-size: $font-size-big;
+    line-height: $line-height-any-big;
+  }
+}
