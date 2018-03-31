@@ -1,3 +1,4 @@
+include ../data/menu.pug
 block vars
   - var headerMainLogo = '';
   // - var currentHref = '';
@@ -17,10 +18,13 @@ header.header-main
       button.nav-main__open-menu.active-menu
         span
       ul.nav-main__items
-        +mainNav('index.html', 'главная')
-        +mainNav('photo.html', 'наши работы')
-        +mainNav('form.html', 'записаться')
-        +mainNav('#', 'html academy')
+        each item, name in menu
+          li.nav-main__item
+            if name === pageName
+              a.nav-main__link= item[1]
+            else
+              a.nav-main__link(href= item[0])= item[1]
+
         li.nav-main__item
           a.nav-main__login(href='#')
             img(src='../../img/login.png')
