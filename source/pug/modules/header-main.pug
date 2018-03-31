@@ -1,7 +1,6 @@
 include ../data/menu.pug
 block vars
   - var headerMainLogo = '';
-  // - var currentHref = '';
 
 header.header-main
   div(class=`header-main__logo ${headerMainLogo}`)
@@ -13,9 +12,9 @@ header.header-main
           use.header-main__logo-img(xlink:href='#icon-logo-tablet')
         svg.header-main__logo-desktop(width='372' height='155' aria-label="Логотип Барбершоп")
           use.header-main__logo-img(xlink:href='#icon-logo-desktop')
-  nav.nav-main.header-main__nav
+  nav.nav-main.header-main__nav.active-menu.no-js
     div.header-main__wrapper
-      button.nav-main__open-menu.active-menu
+      button.nav-main__open-menu
         span
       ul.nav-main__items
         each item, name in menu

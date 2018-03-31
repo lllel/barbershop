@@ -1,37 +1,24 @@
+let navMain = document.querySelector('.nav-main');
 let modalMenuBtn = document.querySelector('.nav-main__open-menu');
-let modalMenuItem = document.querySelectorAll('.nav-main__item');
-let modalMenuItems = document.querySelector('.nav-main__items');
+let currentItem = document.querySelectorAll('.nav-main__link:not([href])');
 
-// modalMenuItems.addEventListener('click', function (evt) {
-//   closeModalMenu();
-//
-//   [].forEach.call(modalMenuItem, function (item) {
-//     item.classList.remove('nav-main__item--active');
-//   });
-//
-//   evt.target.closest('li').style.display = 'flex';
-// });
+navMain.classList.remove('no-js');
+navMain.classList.remove('active-menu');
+
+[].forEach.call(currentItem, function (it) {
+  it.parentElement.style.display = 'flex';
+});
 
 function openModalMenu() {
-  modalMenuBtn.classList.add('active-menu');
-
-  // [].forEach.call(modalMenuItem, function (item) {
-  //   item.classList.add('nav-main__item--active');
-  // });
+  navMain.classList.add('active-menu');
 }
 
 function closeModalMenu() {
-  modalMenuBtn.classList.remove('active-menu');
-
-  [].forEach.call(modalMenuItem, function (item) {
-    item.classList.remove('nav-main__item--active');
-  });
-
-  // evt.target.style.display = 'flex';
+  navMain.classList.remove('active-menu');
 }
 
 function onModalMenuBtnClick() {
-  if (modalMenuBtn.classList.contains('active-menu')) {
+  if (navMain.classList.contains('active-menu')) {
     closeModalMenu();
 
   } else {
