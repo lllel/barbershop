@@ -1,7 +1,9 @@
 include ../mixins/mixins.pug
 
 block variables
-  - var pageTitle = 'pageTitle'
+  -
+    var pageTitle = 'pageTitle';
+    var pageName = 'pageName';
 
 doctype html
 html(lang='ru')
@@ -11,7 +13,7 @@ html(lang='ru')
     link(rel='preload' href='fonts/PT-Sans-Narrow.woff2' as='font')
     link(rel='preload' href='fonts/PT-Sans-Narrow-Bold.woff2' as='font')
     link(rel='stylesheet' href='css/style.min.css')
-    title #{pageTitle}
+    title= pageTitle
   body
     include ../modules/header-main.pug
 
