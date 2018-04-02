@@ -3,15 +3,16 @@
 }
 
 .intro__title {
-  padding: 0 70px;
+  padding: 26px 50px 0;
   margin: 0;
   text-align: center;
+  text-transform: uppercase;
   font-size: $font-size-medium;
   line-height: $line-height-big;
 }
 
 .intro__info {
-  padding: 0 30px;
+  padding: 9px 30px 24px;
   margin: 0;
   text-align: center;
   font-size: $font-size-medium-small;
@@ -29,7 +30,7 @@
 }
 
 .intro__tr {
-  height: 80px;
+  height: 79px;
 
   &:nth-child(1),
   &:nth-child(4) {
@@ -46,19 +47,19 @@
 }
 
 .intro__price {
-  width: 50%;
-  padding-left: 23px;
+  width: 55%;
+  padding-left: 20px;
   font-size: $font-size-big;
   line-height: $line-height-any-big;
   font-weight: $font-weight-bold;
 }
 
 .intro__description {
-  width: 50%;
-  padding: 0 25px 0 24px;
+  width: 45%;
+  padding: 0 22px 0 11px;
   text-align: right;
   font-size: $font-size-small;
-  line-height: $line-height-medium;
+  line-height: $line-height-any-small;
 }
 
 .intro__legend-top {
@@ -67,6 +68,7 @@
 
 .intro__legend-bottom {
   margin: 0;
+  padding-top: 14px;
   text-align: center;
   font-size: $font-size-medium-small;
   line-height: $line-height-medium-big;
@@ -93,13 +95,27 @@
     flex-direction: row;
     flex-wrap: wrap;
     min-height: 185px;
-    padding: 35px 0 0 40px;
+    padding: 31px 0 0 40px;
     background-color: $white-color;
     z-index: 5;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 43px;
+      left: -22px;
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 22px solid $white-color;
+      border-left: 22px solid transparent;
+    }
   }
 
   .intro__legend-top {
     display: block;
+    margin: 0;
+    margin-bottom: 15px;
     text-align: center;
     font-size: $font-size-medium-small;
     line-height: $line-height-medium;
@@ -115,15 +131,19 @@
     width: 50%;
     margin: 0;
     padding-left: 0;
+    padding-bottom: 0;
     text-align: left;
   }
 
   .intro__title {
+    padding-top: 0;
     font-size: $font-size-big;
     line-height: $line-height-any-big;
+    text-transform: none;
   }
 
   .intro__info {
+    padding: 5px 55px 0 12px;
     font-size: $font-size-medium-small;
     line-height: $line-height-medium;
   }
@@ -136,9 +156,11 @@
   .intro__table td {
     display: block;
     padding: 0;
+    width: auto;
   }
 
   .intro__description {
+    margin-top: 11px;
     text-align: left;
     font-size: $font-size-medium-small;
 
@@ -151,10 +173,11 @@
     width: 50%;
     min-height: 160px;
     height: auto;
-    padding-left: 35px;
+    padding-left: 30px;
   }
 
   .intro__price {
+    margin-top: 25px;
     font-size: $font-size-very-big;
     line-height: $line-height-any-biggest;
   }
@@ -175,6 +198,7 @@
 
   .intro__tr {
     height: auto;
+    min-height: 158px;
   }
 
   .intro__wrapper {
@@ -198,6 +222,12 @@
   .intro__ad {
     flex-direction: column;
     justify-content: space-between;
+    padding-top: 27px;
+
+    &::after {
+      content: "";
+      top: 33px;
+    }
   }
 
   .intro__title {
@@ -206,9 +236,18 @@
 
   .intro__info {
     width: auto;
+    padding-top: 0;
+    padding-left: 2px;
+    margin-top: 9px;
   }
 
   .intro__legend-top {
+    margin: 0 0 31px;
     text-align: left;
+    padding-right: 30px;
+  }
+
+  .intro__price {
+    margin-top: 21px;
   }
 }

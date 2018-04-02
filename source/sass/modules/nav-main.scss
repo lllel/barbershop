@@ -19,7 +19,7 @@
 
 .nav-main__item {
   align-items: center;
-  height: 50px;
+  height: 51px;
   list-style-type: none;
   border-bottom: 1px solid $brown-color-hs1138463;
   border-top: 1px solid $brown-color-hs13611091;
@@ -36,7 +36,7 @@
 
 .nav-main__link {
   width: 100%;
-  padding: 14px 0 14px 20px;
+  padding: 13px 0 14px 20px;
   font-size: 18px;
   font-weight: $font-weight-bold;
   line-height: 24px;
@@ -46,14 +46,20 @@
 }
 
 .nav-main__login {
+  padding-left: 19px;
   font-family: "PT Sans Narrow", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   text-transform: capitalize;
+  text-decoration: none;
   color: $white-color;
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  & img {
+    padding-right: 13px;
+  }
 }
 
 .nav-main__open-menu {
@@ -61,7 +67,7 @@
   top: 0;
   right: 0;
   display: block;
-  width: 70px;
+  width: 71px;
   height: 50px;
   margin-left: auto;
   z-index: 11;
@@ -83,17 +89,19 @@
   .nav-main__link:not([href]) {
     display: flex;
     justify-content: center;
+    padding-right: 20px;
   }
 
   .nav-main.active-menu .nav-main__open-menu {
     position: static;
+    width: 87px;
   }
 
   .nav-main.active-menu .nav-main__items {
     display: flex;
     flex-direction: column;
     height: auto;
-    min-height: auto;
+    min-height: 568px;
     width: 100%;
   }
 
@@ -197,6 +205,11 @@
     box-shadow: none;
     border-bottom: none;
     background-color: transparent;
+
+    &:last-child {
+      width: 23px;
+      margin-right: 25px;
+    }
   }
 
   .nav-main__link {
@@ -210,11 +223,28 @@
     align-items: center;
     width: 100px;
     height: 100%;
+    padding: 0;
     font-size: 0;
+
+    & img {
+      padding-right: 0;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
+  .nav-main__items {
+    padding-left: 28px;
+  }
+
+  .nav-main__item {
+    &:last-child {
+      width: auto;
+      margin-right: 13px;
+      margin-left: 61px;
+    }
+  }
+
   .nav-main__login {
     font-size: $font-size-small;
     line-height: $line-height-medium-small;

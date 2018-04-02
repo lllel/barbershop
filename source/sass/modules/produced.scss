@@ -3,6 +3,7 @@
 }
 
 .produced__title {
+  margin: 28px 0 14px;
   text-align: center;
   font-size: $font-size-small;
   line-height: $line-height-medium;
@@ -14,8 +15,8 @@
   flex-direction: row;
   justify-content: center;
   margin: 0 auto;
-  width: 80%;
-  padding: 10px;
+  width: 87%;
+  padding: 11px;
   border: 1px solid $grey-color-hsl626262;
   font-size: $font-size-small;
   line-height: $line-height-medium-small;
@@ -29,6 +30,10 @@
   .produced {
     width: 160px;
     padding-bottom: 30px;
+  }
+
+  .produced__title {
+    margin-top: 48px;
   }
 
   .produced__organization {

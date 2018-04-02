@@ -42,9 +42,9 @@
   }
 
   .header-main__logo {
-    height: 387px;
+    height: 397px;
     background-color: $black-color;
-    background-image: url("../../img/bg-tablet.jpg");
+    background-image: url("../img/bg-tablet.jpg");
     background-position: center top;
     background-size: contain;
     background-attachment: fixed;
@@ -78,7 +78,7 @@
 
   .header-main__logo {
     height: 650px;
-    background-image: url("../../img/bg-desktop.jpg");
+    background-image: url("../img/bg-desktop.jpg");
   }
 
   .header-main__logo-tablet {
@@ -91,5 +91,10 @@
 
   .header-main__logo--small-height {
     height: 308px;
+  }
+
+  .header-main__logo-link {
+    height: 155px;
+    margin-top: 55px;
   }
 }

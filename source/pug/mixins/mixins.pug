@@ -7,7 +7,14 @@ mixin slideReview (userName, info, img)
   div.slider-reviews__slide
     h2.slider-reviews__user-name= userName
     p.slider-reviews__review= info
-    img.slider-reviews__img(src=img width='50' height='47')
+    picture
+      source(media='(min-width: 1200px)' type='image/webp'
+        srcset='img/' + img + '-desktop.webp 1x')
+      source(media='(min-width: 1200px)'
+        srcset='img/' + img + '-desktop.jpg 1x')
+      source(media='(min-width: 320px)' type='image/webp'
+        srcset='img/' + img + '.webp 1x')
+      img.slider-reviews__img(src='img/' + img + '.jpg' alt='Фото работы')
 
 mixin newsItem (dataNum, month, info)
   div.news__data-container

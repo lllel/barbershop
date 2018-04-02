@@ -17,19 +17,19 @@
 }
 
 .socials__item--vk {
-  background-image: url("../../img/vk-icon-big.png");
+  background-image: url("../img/vk-icon-big.png");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .socials__item--fb {
-  background-image: url("../../img/facebook-icon-big.png");
+  background-image: url("../img/facebook-icon-big.png");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .socials__item--in {
-  background-image: url("../../img/insta-icon-big.png");
+  background-image: url("../img/insta-icon-big.png");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -67,6 +67,8 @@
 
   .socials__sentence {
     display: block;
+    margin: 0 auto;
+    padding-bottom: 11px;
     font-size: $font-size-small;
     line-height: $line-height-medium;
     color: $white-color;
