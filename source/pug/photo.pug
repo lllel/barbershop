@@ -87,10 +87,10 @@ block main
               svg(width='23' height='22' aria-label='Иконка - бритьё')
                 use.card__item-img(xlink:href='#icon-beard-1')
               span.card__description борода
-              li.card__item
-                svg(width='46' height='16' aria-label='Иконка - усы')
-                  use.card__item-img(xlink:href='#icon-mustache')
-                span.card__description усы
+            li.card__item
+              svg(width='46' height='16' aria-label='Иконка - усы')
+                use.card__item-img(xlink:href='#icon-mustache')
+              span.card__description усы
       article.card.our-work__card
         picture
           source(media='(min-width: 1200px)' type='image/webp'
@@ -118,27 +118,42 @@ block main
       li.price-list__item
         p.price-list__numbering 1
         p.price-list__heading Классическая стрижка
-        p.price-list__description (с мытьём головы)
+        p.price-list__description
+          span (
+          | с мытьём головы
+          span )
         p.price-list__price 1 500 руб.
       li.price-list__item
         p.price-list__numbering 2
         p.price-list__heading Современный вариант
-        p.price-list__description (с мытьём головы)
+        p.price-list__description
+          span (
+          | с мытьём головы
+          span )
         p.price-list__price 1 500 руб.
       li.price-list__item
         p.price-list__numbering 3
         p.price-list__heading Индивидуальный подход
-        p.price-list__description (с мытьём головы)
+        p.price-list__description
+          span (
+          | с мытьём головы
+          span )
         p.price-list__price 2 000 руб.
       li.price-list__item
         p.price-list__numbering 4
         p.price-list__heading Бритьё головы
-        p.price-list__description (без мытья)
+        p.price-list__description
+          span (
+          | без мытья
+          span )
         p.price-list__price 500 руб.
       li.price-list__item
         p.price-list__numbering 5
         p.price-list__heading Бритьё головы
-        p.price-list__description (с мытьём головы)
+        p.price-list__description
+          span (
+          | с мытьём головы
+          span )
         p.price-list__price 1 000 руб.
     div.price-list__clock
       svg(width='60' height='60' aria-label='Часы')

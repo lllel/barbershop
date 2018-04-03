@@ -22,5 +22,25 @@ html(lang='ru')
 
     block main
 
+    section.login-menu.login-menu--hidden
+      h1.login-menu__title личный кабинет
+      p.login-menu__hint Введите свой логин и пароль, чтобы войти
+      form.login-menu__form(action='#' method='POST')
+        div.login-menu__container-text
+          input#login.login-menu__input(type='text' name='login' placeholder='Логин')
+          label.visually-hidden(for='login')
+          input#password.login-menu__input(type='text' name='password' placeholder='Пароль')
+          label.visually-hidden(for='password')
+        div.login-menu__container-checkbox
+          input#checkbox-remember.visually-hidden(type='checkbox' name='checkbox-remember')
+          label.login-menu__checkbox-label(for='checkbox-remember') Запомните меня
+          a.login-menu__remember-link(href='#') Я забыл пароль!
+        div.login-menu__container-buttons
+          button.login-menu__submit(type='submit') войти
+            span в личный кабинет
+          button.login-menu__cancel(type='reset') закрыть
+      button.login-menu__close
+        span
+
     include ../modules/footer-main.pug
     include ../modules/scripts.pug
