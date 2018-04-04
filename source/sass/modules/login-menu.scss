@@ -152,59 +152,12 @@
   font-size: $font-size-small;
   line-height: $line-height-medium-small;
   font-weight: $font-weight-bold;
+  z-index: 15;
   border: 1px solid $grey-color-hsl229221213;
   color: $black-color;
   background-color: transparent;
   text-decoration: none;
   text-transform: uppercase;
-}
-
-.login-menu__close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: none;
-  width: 30px;
-  height: 30px;
-  margin-left: auto;
-  padding: 0;
-  z-index: 15;
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
-}
-
-.login-menu__close span {
-  position: relative;
-  display: block;
-  width: 30px;
-  height: 2px;
-  margin: 0 auto;
-  background-color: transparent;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 30px;
-    height: 2px;
-    transform: rotate(45deg);
-    background-color: $white-color;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 30px;
-    height: 2px;
-    transform: rotate(-45deg);
-    background-color: $white-color;
-  }
 }
 
 @media (min-width: $tablet-width) {
@@ -216,23 +169,47 @@
     min-height: 500px;
   }
 
-  .login-menu__close {
-    display: block;
+  .login-menu__cancel {
+    position: absolute;
     top: 60px;
     right: -103px;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    font-size: 0;
+    border: 0;
   }
 
-  .login-menu__close span {
+  .login-menu__cancel span {
+    position: relative;
+    display: block;
+    width: 35px;
+    height: 2px;
+    margin: 0 auto;
+    background-color: transparent;
+
     &::before {
       content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
       width: 35px;
       height: 2px;
+      transform: rotate(45deg);
+      background-color: $white-color;
     }
 
     &::after {
       content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
       width: 35px;
       height: 2px;
+      transform: rotate(-45deg);
+      background-color: $white-color;
     }
   }
 
@@ -281,10 +258,6 @@
       display: inline;
       padding-left: 5px;
     }
-  }
-
-  .login-menu__cancel {
-    display: none;
   }
 }
 
