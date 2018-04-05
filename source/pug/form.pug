@@ -36,34 +36,39 @@ block main
           input#email.contacts__input(type='email' name='email' placeholder='Контактный e-mail')
           label.visually-hidden(for='email')
             span.visually-hidden текст
-      textarea.textarea.form-main__item(name='textarea' placeholder='Доп. информация для мастера')
+      textarea.textarea.textarea--position.form-main__item(name='textarea' placeholder='Доп. информация для мастера')
     div.form-main__radio
       h2.form-main__heading выберите модель бороды:
       div.form-main__wrapper
         p.model.form-main__item
           input#radio1.visually-hidden(type='radio' name='radio')
-          label.model__label(for='radio1') адмирал
-          svg(width='54' height='50' aria-label='Иконка - борода')
+          label.model__label(for='radio1')
+            span адмирал
+          svg(width='53' height='75' aria-label='Иконка - борода')
             use.model__icon(xlink:href='#icon-beard-1')
         p.model.form-main__item
           input#radio2.visually-hidden(type='radio' name='radio')
-          label.model__label(for='radio2') лесоруб
-          svg(width='54' height='50' aria-label='Иконка - борода')
+          label.model__label(for='radio2')
+            span лесоруб
+          svg(width='54' height='95' aria-label='Иконка - борода')
             use.model__icon(xlink:href='#icon-beard-2')
         p.model.form-main__item
           input#radio3.visually-hidden(type='radio' name='radio')
-          label.model__label(for='radio3') полярник
-          svg(width='54' height='50' aria-label='Иконка - борода')
+          label.model__label(for='radio3')
+            span полярник
+          svg(width='65' height='105' aria-label='Иконка - борода')
             use.model__icon(xlink:href='#icon-beard-3')
         p.model.form-main__item
           input#radio4.visually-hidden(type='radio' name='radio')
-          label.model__label(for='radio4') боярин
-          svg(width='54' height='50' aria-label='Иконка - борода')
+          label.model__label(for='radio4')
+            span боярин
+          svg(width='57' height='115' aria-label='Иконка - борода')
             use.model__icon(xlink:href='#icon-beard-4')
         p.model.form-main__item
           input#radio5.visually-hidden(type='radio' name='radio')
-          label.model__label(for='radio5') мудрец
-          svg(width='54' height='50' aria-label='Иконка - борода')
+          label.model__label(for='radio5')
+            span мудрец
+          svg(width='54' height='115' aria-label='Иконка - борода')
             use.model__icon(xlink:href='#icon-beard-5')
     div.form-main__checkbox
       h2.form-main__heading дополнительные услуги:

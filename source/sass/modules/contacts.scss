@@ -1,8 +1,12 @@
+.contacts {
+  margin: 0;
+}
+
 .contacts__input {
   display: block;
   width: 100%;
-  padding: 10px;
-  margin: 0 auto;
+  padding: 9px 10px 9px 18px;
+  margin: 0 auto 5px;
   border: 1px solid $grey-color-hsl229221213;
   font-family: "PT Sans Narrow", "Arial", sans-serif;
   font-size: $font-size-small;
@@ -18,6 +22,7 @@
 
 @media (min-width: $tablet-width) {
   .contacts__input {
+    padding: 19px 10px 19px 24px;
     font-size: $font-size-medium-small-2;
     line-height: $line-height-medium-big;
 

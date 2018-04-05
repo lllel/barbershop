@@ -4,7 +4,7 @@
   max-width: 100%;
   min-width: 100%;
   min-height: 112px;
-  padding: 10px;
+  padding: 9px 10px 9px 18px;
   margin: 0 auto;
   border: 1px solid $grey-color-hsl229221213;
   font-family: "PT Sans Narrow", "Arial", sans-serif;
@@ -19,11 +19,16 @@
   }
 }
 
+.textarea--position {
+  margin-top: 30px;
+}
+
 @media (min-width: $tablet-width) {
   .textarea {
     height: 210px;
     min-height: 210px;
     max-height: 210px;
+    padding: 19px 10px 19px 24px;
     font-size: $font-size-medium-small-2;
     line-height: $line-height-medium-big;
 
@@ -31,5 +36,11 @@
       font-size: $font-size-medium-small-2;
       line-height: $line-height-medium-big;
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .textarea--position {
+    margin-top: 0;
   }
 }

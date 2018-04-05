@@ -3,6 +3,11 @@
 }
 
 .model__label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2px;
+  margin-left: 3px;
   font-size: $font-size-small;
   line-height: $line-height-medium-small;
   color: $black-color;
@@ -18,16 +23,26 @@
   }
 }
 
+.model__label span {
+  display: block;
+  margin-top: 11px;
+}
+
 .model__icon {
   fill: $brown-color-hsl3010180;
 }
 
 @media (min-width: $tablet-width) {
   .model {
-    width: 20%;
+    width: 16%;
   }
 
   .model__label {
+    margin-left: 0;
     font-size: $font-size-medium-small-2;
+  }
+
+  .model__label span {
+    margin-top: 29px;
   }
 }
