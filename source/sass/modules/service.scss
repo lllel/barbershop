@@ -1,4 +1,11 @@
-.service {
+.service__label {
+  display: flex;
+  flex-direction: row;
+  font-size: $font-size-small;
+  line-height: $line-height-medium-big;
+  color: $black-color;
+  cursor: pointer;
+
   &::before {
     content: "";
     display: block;
@@ -9,11 +16,32 @@
   }
 }
 
-.service__label {
-  padding-left: 25px;
-  font-size: $font-size-small;
-  line-height: $line-height-medium-big;
-  color: $black-color;
+.service__label span {
+  padding-left: 23px;
+}
+
+.service__input:checked + .service__label {
+  &::before {
+    content: "";
+    background-image: url("../img/icon-ok.svg");
+    background-repeat: no-repeat;
+    background-size: 23px 17px;
+    background-position: center;
+  }
+}
+
+.service__input:hover + .service__label {
+  &::before {
+    content: "";
+    border-color: $brown-color-hs1213201189;
+  }
+}
+
+.service__input:active + .service__label {
+  &::before {
+    content: "";
+    background-color: $brown-color-hs1213201189;
+  }
 }
 
 @media (min-width: $tablet-width) {

@@ -3,6 +3,23 @@
   flex-direction: row;
   width: 100%;
   padding: 0;
+  transition: 0.2s;
+
+  &:active {
+    background-color: $grey-color-hsl373737;
+    transition: 0.2s;
+  }
+}
+
+.socials:hover .socials__item {
+  border-color: $grey-color-hsl818181;
+  transition: 0.2s;
+}
+
+.socials:active .socials__item {
+  opacity: 0.3;
+  border-color: $grey-color-hsl373737;
+  transition: 0.2s;
 }
 
 .socials__sentence {

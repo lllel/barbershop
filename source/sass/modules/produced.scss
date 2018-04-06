@@ -24,6 +24,20 @@
   color: $white-color;
   text-transform: uppercase;
   text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    border-color: $grey-color-hsl818181;
+    transition: 0.2s;
+  }
+
+  &:active {
+    color: $grey-color-hsl103103103;
+    border-color: $grey-color-hsl373737;
+    background-color: $grey-color-hsl373737;
+    transition: 0.2s;
+  }
 }
 
 @media (min-width: $tablet-width) {

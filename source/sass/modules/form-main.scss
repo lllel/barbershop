@@ -59,6 +59,17 @@
   background-color: transparent;
   text-decoration: none;
   text-transform: uppercase;
+
+  &:hover {
+    transition: 0.2s;
+    border-color: $brown-color-hs1213201189;
+  }
+
+  &:active {
+    transition: 0.2s;
+    color: $brown-color-hs1149140132;
+    background-color: $brown-color-hs1213201189;
+  }
 }
 
 .form-main__title {
@@ -121,6 +132,23 @@
   text-transform: uppercase;
   background-color: $brown-color-hsl3010180;
   border: none;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: $brown-color-hs1067756;
+    transition: 0.2s;
+  }
+
+  &:active {
+    color: $brown-color-hs1151131116;
+    transition: 0.2s;
+  }
+
+  &:disabled {
+    background-color: $grey-color-hsl174174174;
+    cursor: not-allowed;
+  }
 }
 
 @media (min-width: $tablet-width) {

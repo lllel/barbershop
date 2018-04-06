@@ -20,6 +20,14 @@
   }
 }
 
+.contacts__input:hover {
+  border-color: $brown-color-hs1213201189;
+}
+
+.contacts__input:focus {
+  border-color: $grey-color-hsl153153153;
+}
+
 @media (min-width: $tablet-width) {
   .contacts__input {
     padding: 19px 10px 19px 24px;

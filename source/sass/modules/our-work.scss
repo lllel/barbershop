@@ -32,6 +32,17 @@
   background-color: transparent;
   text-decoration: none;
   text-transform: uppercase;
+
+  &:hover {
+    transition: 0.2s;
+    border-color: $brown-color-hs1213201189;
+  }
+
+  &:active {
+    transition: 0.2s;
+    color: $brown-color-hs1149140132;
+    background-color: $brown-color-hs1213201189;
+  }
 }
 
 .our-work__card {

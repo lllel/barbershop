@@ -13,7 +13,7 @@ block main
     div.form-main__wrapper
       div.form-main__container
         h1.title.form-main__title запись на стрижку
-        a.form-main__button на главную
+        a.form-main__button(href='index.html') на главную
       div.form-main__user-name
         p.user-name.form-main__item
           input#surname.user-name__input(type='text' name='surname' placeholder='Фамилия')
@@ -41,31 +41,31 @@ block main
       h2.form-main__heading выберите модель бороды:
       div.form-main__wrapper
         p.model.form-main__item
-          input#radio1.visually-hidden(type='radio' name='radio')
+          input#radio1.model__input.visually-hidden(type='radio' name='radio' checked)
           label.model__label(for='radio1')
             span адмирал
           svg(width='53' height='75' aria-label='Иконка - борода')
             use.model__icon(xlink:href='#icon-beard-1')
         p.model.form-main__item
-          input#radio2.visually-hidden(type='radio' name='radio')
+          input#radio2.model__input.visually-hidden(type='radio' name='radio')
           label.model__label(for='radio2')
             span лесоруб
           svg(width='54' height='95' aria-label='Иконка - борода')
             use.model__icon(xlink:href='#icon-beard-2')
         p.model.form-main__item
-          input#radio3.visually-hidden(type='radio' name='radio')
+          input#radio3.model__input.visually-hidden(type='radio' name='radio')
           label.model__label(for='radio3')
             span полярник
           svg(width='65' height='105' aria-label='Иконка - борода')
             use.model__icon(xlink:href='#icon-beard-3')
         p.model.form-main__item
-          input#radio4.visually-hidden(type='radio' name='radio')
+          input#radio4.model__input.visually-hidden(type='radio' name='radio')
           label.model__label(for='radio4')
             span боярин
           svg(width='57' height='115' aria-label='Иконка - борода')
             use.model__icon(xlink:href='#icon-beard-4')
         p.model.form-main__item
-          input#radio5.visually-hidden(type='radio' name='radio')
+          input#radio5.model__input.visually-hidden(type='radio' name='radio')
           label.model__label(for='radio5')
             span мудрец
           svg(width='54' height='115' aria-label='Иконка - борода')
@@ -74,21 +74,27 @@ block main
       h2.form-main__heading дополнительные услуги:
       div.form-main__wrapper
         p.service.form-main__item
-          input#checkbox1.visually-hidden(type='checkbox' name='checkbox1')
-          label.service__label(for='checkbox1') Подкрасить бороду
+          input#checkbox1.service__input.visually-hidden(type='checkbox' name='checkbox1' checked)
+          label.service__label(for='checkbox1')
+            span Подкрасить бороду
         p.service.form-main__item
-          input#checkbox2.visually-hidden(type='checkbox' name='checkbox2')
-          label.service__label(for='checkbox2') Накрутить усы
+          input#checkbox2.service__input.visually-hidden(type='checkbox' name='checkbox2' checked)
+          label.service__label(for='checkbox2')
+            span Накрутить усы
         p.service.form-main__item
-          input#checkbox3.visually-hidden(type='checkbox' name='checkbox3')
-          label.service__label(for='checkbox3') Причесать бороду
+          input#checkbox3.service__input.visually-hidden(type='checkbox' name='checkbox3')
+          label.service__label(for='checkbox3')
+            span Причесать бороду
         p.service.form-main__item
-          input#checkbox4.visually-hidden(type='checkbox' name='checkbox4')
-          label.service__label(for='checkbox4') Подровнять виски
+          input#checkbox4.service__input.visually-hidden(type='checkbox' name='checkbox4')
+          label.service__label(for='checkbox4')
+            span Подровнять виски
         p.service.form-main__item
-          input#checkbox5.visually-hidden(type='checkbox' name='checkbox5')
-          label.service__label(for='checkbox5') Убрать седину
+          input#checkbox5.service__input.visually-hidden(type='checkbox' name='checkbox5')
+          label.service__label(for='checkbox5')
+            span Убрать седину
         p.service.form-main__item
-          input#checkbox6.visually-hidden(type='checkbox' name='checkbox6')
-          label.service__label(for='checkbox6') Отпролировать лысину
+          input#checkbox6.service__input.visually-hidden(type='checkbox' name='checkbox6')
+          label.service__label(for='checkbox6')
+            span Отпролировать лысину
     button.form-main__submit(type='submit') отправить заявку

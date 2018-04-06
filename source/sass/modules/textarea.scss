@@ -19,6 +19,14 @@
   }
 }
 
+.textarea:hover {
+  border-color: $brown-color-hs1213201189;
+}
+
+.textarea:focus {
+  border-color: $grey-color-hsl153153153;
+}
+
 .textarea--position {
   margin-top: 30px;
 }

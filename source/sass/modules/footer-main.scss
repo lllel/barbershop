@@ -33,9 +33,23 @@
   line-height: $line-height-medium;
   font-weight: $font-weight-bold;
   color: $white-color;
+  cursor: pointer;
+  transition: 0.2s;
 
   & span {
     display: none;
+  }
+
+  &:hover {
+    border-color: $grey-color-hsl818181;
+    transition: 0.2s;
+  }
+
+  &:active {
+    color: $grey-color-hsl103103103;
+    border-color: $grey-color-hsl373737;
+    background-color: $grey-color-hsl373737;
+    transition: 0.2s;
   }
 }
 
@@ -44,6 +58,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .footer-main {
+    padding-bottom: 43px;
+  }
+
   .footer-main__wrapper {
     @include wrapper();
 
@@ -84,7 +102,6 @@
   .footer-main__socials {
     order: 3;
     margin-top: 22px;
-    padding-bottom: 43px;
   }
 }
 
