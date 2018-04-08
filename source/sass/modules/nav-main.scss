@@ -19,7 +19,6 @@
 
 .nav-main__item {
   align-items: center;
-  height: 51px;
   list-style-type: none;
   border-bottom: 1px solid $brown-color-hs1138463;
   border-top: 1px solid $brown-color-hs13611091;
@@ -36,7 +35,7 @@
 
 .nav-main__link {
   width: 100%;
-  padding: 13px 0 14px 20px;
+  padding: 12px 0 12px 20px;
   font-size: 18px;
   font-weight: $font-weight-bold;
   line-height: 24px;
@@ -47,7 +46,7 @@
 
 .nav-main__login {
   position: relative;
-  padding-left: 45px;
+  padding: 13px 0 13px 45px;
   font-family: "PT Sans Narrow", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -263,6 +262,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
     min-height: auto;
     padding: 0;

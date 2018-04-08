@@ -50,7 +50,10 @@
   display: none;
   width: 160px;
   min-height: 50px;
+  text-align: center;
+  padding: 12px 10px;
   margin: 0 auto;
+  word-wrap: break-word;
   font-size: $font-size-small;
   line-height: $line-height-medium-small;
   font-weight: $font-weight-bold;
@@ -117,19 +120,19 @@
 }
 
 .form-main__submit {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  display: block;
   width: 87%;
   min-height: 50px;
+  padding: 12px 10px;
   margin: 44px auto 0;
+  text-align: center;
   font-family: "PT Sans Narrow", "Arial", sans-serif;
   font-size: $font-size-small;
   line-height: $line-height-medium-small;
   font-weight: $font-weight-bold;
   color: $white-color;
   text-transform: uppercase;
+  word-wrap: break-word;
   background-color: $brown-color-hsl3010180;
   border: none;
   cursor: pointer;
@@ -186,16 +189,14 @@
   }
 
   .form-main__button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    display: block;
     margin-right: 0;
   }
 
   .form-main__user-name {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin-top: 68px;
   }
 
@@ -268,6 +269,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: flex-start;
     margin-top: 69px;
   }
 
@@ -322,6 +324,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .form-main__radio .form-main__wrapper,

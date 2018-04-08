@@ -23,7 +23,10 @@
   display: none;
   width: 160px;
   min-height: 50px;
+  padding: 12px 10px;
   margin: 0 auto;
+  text-align: center;
+  word-wrap: break-word;
   font-size: $font-size-small;
   line-height: $line-height-medium-small;
   font-weight: $font-weight-bold;
@@ -106,10 +109,7 @@
   }
 
   .our-work__button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    display: block;
     margin-right: 0;
   }
 
@@ -122,7 +122,8 @@
   }
 
   .our-work__card--work-month {
-    height: 480px;
+    height: auto;
+    min-height: 480px;
     margin-bottom: 40px;
   }
 }
@@ -138,6 +139,7 @@
   }
 
   .our-work__container {
+    align-items: stretch;
     width: 960px;
     margin: 21px auto 80px;
     padding: 0;

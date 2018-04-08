@@ -1,6 +1,7 @@
 .service__label {
   display: flex;
   flex-direction: row;
+  width: 100%;
   font-size: $font-size-small;
   line-height: $line-height-medium-big;
   color: $black-color;
@@ -17,7 +18,9 @@
 }
 
 .service__label span {
+  width: 90%;
   padding-left: 23px;
+  word-wrap: break-word;
 }
 
 .service__input:checked + .service__label {
@@ -41,6 +44,13 @@
   &::before {
     content: "";
     background-color: $brown-color-hs1213201189;
+  }
+}
+
+.service__input:focus + .service__label {
+  &::before {
+    content: "";
+    border-color: $brown-color-hs1213201189;
   }
 }
 
@@ -106,5 +116,9 @@
     &:nth-child(6) {
       order: 6;
     }
+  }
+
+  .service__label span {
+    width: 85%;
   }
 }

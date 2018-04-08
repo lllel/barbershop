@@ -55,6 +55,7 @@
 }
 
 .price-list__heading {
+  width: 70%;
   margin: 0;
   font-size: $font-size-medium-small;
   line-height: $line-height-medium-small;
@@ -64,7 +65,7 @@
 }
 
 .price-list__description {
-  width: 100%;
+  width: 70%;
   margin: 0;
   font-size: $font-size-medium-small;
   line-height: $line-height-medium-small;
@@ -91,6 +92,10 @@
   min-height: 90px;
   margin: 0 auto;
   border: 1px solid $grey-color-hsl727272;
+
+  & svg {
+    width: 50%;
+  }
 }
 
 .price-list__img {
@@ -98,7 +103,7 @@
 }
 
 .price-list__time {
-  padding-right: 27px;
+  width: 50%;
 }
 
 .price-list__time span {
@@ -221,7 +226,7 @@
   }
 
   .price-list__title {
-    width: 100%;
+    width: 65%;
     text-align: left;
   }
 
@@ -239,7 +244,8 @@
   .price-list__clock {
     flex-direction: column;
     width: 270px;
-    height: 280px;
+    height: auto;
+    min-height: 280px;
     margin: 0;
 
     svg {
@@ -252,6 +258,7 @@
 
   .price-list__time {
     width: 170px;
+    height: 20%;
     padding-right: 0;
     margin: 0;
     margin-bottom: 24px;

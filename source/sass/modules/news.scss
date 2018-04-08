@@ -102,19 +102,19 @@
 }
 
 .news__button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  display: block;
   width: 87%;
   min-height: 50px;
   margin: 0 auto;
+  text-align: center;
+  padding: 12px 10px;
   font-size: $font-size-small;
   line-height: $line-height-medium-small;
   font-weight: $font-weight-bold;
   border: 1px solid $grey-color-hsl229221213;
   color: $black-color;
   background-color: transparent;
+  word-wrap: break-word;
   text-decoration: none;
   text-transform: uppercase;
 

@@ -25,6 +25,18 @@
   }
 }
 
+.model__label span {
+  display: block;
+  width: 100px;
+  margin-top: 11px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.model__icon {
+  fill: $brown-color-hsl3010180;
+}
+
 .model__input:checked + .model__label {
   &::before {
     content: "";
@@ -49,16 +61,14 @@
   }
 }
 
-.model__label span {
-  display: block;
-  margin-top: 11px;
-}
-
-.model__icon {
-  fill: $brown-color-hsl3010180;
-}
-
 .model__label:hover {
+  &::before {
+    content: "";
+    border-color: $brown-color-hs1213201189;
+  }
+}
+
+.model__input:focus + .model__label {
   &::before {
     content: "";
     border-color: $brown-color-hs1213201189;
@@ -67,7 +77,7 @@
 
 @media (min-width: $tablet-width) {
   .model {
-    width: 16%;
+    width: 17%;
   }
 
   .model__label {

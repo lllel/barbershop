@@ -22,12 +22,12 @@
 }
 
 .footer-main__tel {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  display: block;
   margin: 0 auto;
+  text-align: center;
   width: 87%;
-  padding: 11px;
+  padding: 11px 10px;
+  word-wrap: break-word;
   border: 1px solid $grey-color-hsl626262;
   font-size: $font-size-small;
   line-height: $line-height-medium;
@@ -88,7 +88,8 @@
   }
 
   .footer-main__tel {
-    display: block;
+    display: flex;
+    flex-direction: row;
     margin: 0;
     padding: 0;
     border: none;
