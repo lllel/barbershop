@@ -15,6 +15,7 @@ block main
       a.our-work__button(href='index.html') на главную
     div.our-work__container
       article.card.our-work__card.our-work__card--work-month
+        h2.visually-hidden Работа месяца
         picture
           source(media='(min-width: 1200px)' type='image/webp'
             srcset='img/photo2-desktop.webp 1x')
@@ -27,8 +28,8 @@ block main
           source(media='(min-width: 320px)' type='image/webp'
             srcset='img/photo2.webp 1x')
           img.card__img.card__img--our-work(src='img/photo2.jpg' alt='Фото работы')
-          div.card__feature-container
-            p.card__feature работа месяца
+        div.card__feature-container
+          p.card__feature работа месяца
         div.card__user-item
           p.card__user-name.card__user-name--our-work Лжепётр Мчиславский
           p.card__info.card__info--our-work Где я только ни стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!
@@ -46,6 +47,7 @@ block main
                 use.card__item-img(xlink:href='#icon-mustache')
               span.card__description усы
       article.card.our-work__card
+        h2.visually-hidden Работа
         picture
           source(media='(min-width: 1200px)' type='image/webp'
             srcset='img/photo3-desktop.webp 1x')
@@ -67,6 +69,7 @@ block main
                 use.card__item-img(xlink:href='#icon-scissors-icon')
               span.card__description стрижка
       article.card.our-work__card
+        h2.visually-hidden Работа
         picture
           source(media='(min-width: 1200px)' type='image/webp'
             srcset='img/photo4-desktop.webp 1x')
@@ -92,6 +95,7 @@ block main
                 use.card__item-img(xlink:href='#icon-mustache')
               span.card__description усы
       article.card.our-work__card
+        h2.visually-hidden Работа
         picture
           source(media='(min-width: 1200px)' type='image/webp'
             srcset='img/photo5-desktop.webp 1x')

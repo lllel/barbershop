@@ -8,7 +8,7 @@ block variables
 doctype html
 html(lang='ru')
   head
-    meta(charset='utf8')
+    meta(charset='utf-8')
     meta(name='viewport' content='width=device-width, initial-scale=1')
     link(rel='preload' href='fonts/PT-Sans-Narrow.woff2' as='font')
     link(rel='preload' href='fonts/PT-Sans-Narrow-Bold.woff2' as='font')
@@ -23,7 +23,7 @@ html(lang='ru')
     block main
 
     section.login-menu.login-menu--hidden
-      h1.login-menu__title личный кабинет
+      h2.login-menu__title личный кабинет
       p.login-menu__hint Введите свой логин и пароль, чтобы войти
       form.login-menu__form(action='#' method='POST')
         div.login-menu__container-text
