@@ -87,14 +87,14 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
   min-height: 90px;
   margin: 0 auto;
   border: 1px solid $grey-color-hsl727272;
 
   & svg {
-    width: 50%;
+    width: 35%;
   }
 }
 
@@ -103,7 +103,7 @@
 }
 
 .price-list__time {
-  width: 50%;
+  width: 60%;
 }
 
 .price-list__time span {
@@ -120,7 +120,7 @@
 @media (min-width: $tablet-width) {
   .price-list {
     width: 83%;
-    padding-bottom: 56px;
+    padding-bottom: 54px;
 
     &::after {
       content: "";
@@ -129,7 +129,7 @@
   }
 
   .price-list__title {
-    margin-top: 8px;
+    margin-top: 15px;
     text-align: left;
     font-size: $font-size-big;
     line-height: $line-height-any-big;
@@ -184,7 +184,8 @@
   }
 
   .price-list__time {
-    padding-right: 118px;
+    margin-right: 71px;
+    font-weight: $font-weight-bold;
   }
 
   .price-list__time span {
@@ -227,6 +228,7 @@
 
   .price-list__title {
     width: 65%;
+    margin-top: 6px;
     text-align: left;
   }
 
@@ -262,6 +264,7 @@
     padding-right: 0;
     margin: 0;
     margin-bottom: 24px;
+    font-weight: $font-weight-regular;
     text-align: center;
 
     span {

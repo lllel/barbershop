@@ -37,22 +37,48 @@
 }
 
 .slider-description__slide {
+  position: relative;
   display: none;
   background-size: 100px;
   background-repeat: no-repeat;
   background-position: center 37px;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+  }
+
   &:nth-child(1) {
     display: block;
-    background-image: url("../img/scissors.svg");
+
+    &::before {
+      content: "";
+      background-image: url("../img/scissors.svg");
+    }
   }
 
   &:nth-child(2) {
-    background-image: url("../img/chair.svg");
+    &::before {
+      content: "";
+      background-image: url("../img/chair.svg");
+    }
   }
 
   &:nth-child(3) {
-    background-image: url("../img/thing.svg");
+    &::before {
+      content: "";
+      background-image: url("../img/thing.svg");
+    }
   }
 }
 
@@ -85,7 +111,6 @@
     margin: 0 auto;
     padding-left: 147px;
     padding-bottom: 40px;
-    background-position: 16px 41px;
 
     &::after {
       content: "";
@@ -97,6 +122,11 @@
       width: 93%;
       height: 1px;
       background-color: $grey-color-hsl747474;
+    }
+
+    &::before {
+      content: "";
+      left: 66px;
     }
   }
 
@@ -145,7 +175,6 @@
 
   .slider-description__slide {
     padding: 163px 38px 0;
-    background-position: center 75px;
 
     &::after {
       content: "";
@@ -153,6 +182,12 @@
       left: auto;
       width: 1px;
       height: 78%;
+    }
+
+    &::before {
+      content: "";
+      top: 70px;
+      left: 50%;
     }
   }
 

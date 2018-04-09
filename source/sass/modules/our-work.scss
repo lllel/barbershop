@@ -125,6 +125,8 @@
     height: auto;
     min-height: 480px;
     margin-bottom: 40px;
+    outline: none;
+    border: 1px solid $grey-color-hsl230222215;
   }
 }
 
@@ -154,11 +156,20 @@
     width: 100%;
     min-height: auto;
     padding-right: 80px;
-    padding-bottom: 36px;
+    padding-bottom: 0;
     margin-bottom: 39px;
   }
 
+  .our-work__card--work-month .card__items {
+    padding-bottom: 28px;
+  }
+
+  .our-work__card--work-month .card__item {
+    padding-bottom: 0;
+  }
+
   .our-work__card--work-month .card__user-item {
+    height: auto;
     padding-right: 25px;
     padding-left: 40px;
   }

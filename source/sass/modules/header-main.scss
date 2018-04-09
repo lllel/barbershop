@@ -46,7 +46,7 @@
     background-color: $black-color;
     background-image: url("../img/bg-tablet.jpg");
     background-position: center top;
-    background-size: contain;
+    background-size: cover;
     background-attachment: fixed;
   }
 
@@ -79,6 +79,10 @@
   .header-main__logo {
     height: 650px;
     background-image: url("../img/bg-desktop.jpg");
+  }
+
+  .header-main__logo .header-main__wrapper {
+    margin: 0;
   }
 
   .header-main__logo-tablet {

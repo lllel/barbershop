@@ -22,7 +22,7 @@
   left: 0;
   top: 400px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 169px;
   height: 50px;
   background-color: $brown-color-hsl3010180;
@@ -52,6 +52,7 @@
 
 .card__feature {
   margin: auto;
+  text-align: center;
   font-size: $font-size-medium-small;
   line-height: $line-height-medium;
   font-weight: $font-weight-bold;
@@ -213,7 +214,7 @@
 
   .card__feature-container {
     top: 26px;
-    right: 0;
+    right: -3px;
     left: auto;
     width: 170px;
     transform: rotate(180deg);

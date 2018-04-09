@@ -50,7 +50,7 @@
   }
 }
 
-.news__container:active .news__review {
+.news__review:active {
   color: $brown-color-hs1067756;
   text-decoration: underline;
 }
@@ -105,7 +105,7 @@
   display: block;
   width: 87%;
   min-height: 50px;
-  margin: 0 auto;
+  margin: 44px auto 0;
   text-align: center;
   padding: 12px 10px;
   font-size: $font-size-small;

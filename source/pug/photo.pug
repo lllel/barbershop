@@ -159,9 +159,10 @@ block main
           | с мытьём головы
           span )
         p.price-list__price 1 000 руб.
-    div.price-list__clock
-      svg(width='60' height='60' aria-label='Часы')
-        use.price-list__img(xlink:href='#icon-watches')
-      p.price-list__time
-        span C 10:00 до 14:00
-        span  скидка 20%
+    div.ie-flex-bugs-container
+      div.price-list__clock
+        svg(width='60' height='60' aria-label='Часы')
+          use.price-list__img(xlink:href='#icon-watches')
+        p.price-list__time
+          span C 10:00 до 14:00
+          span  скидка 20%
