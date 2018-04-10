@@ -74,10 +74,10 @@
       content: "";
       position: absolute;
       left: 0;
-      top: -33px;
+      top: -40px;
       display: block;
       width: 100%;
-      height: 42px;
+      height: 50px;
       background-image: url("../img/triangle.png");
       background-repeat: no-repeat;
       background-size: 100% 80%;
@@ -137,6 +137,13 @@
     &::after {
       content: "";
       display: none;
+    }
+
+    &::before {
+      content: "";
+      top: -60px;
+      height: 75px;
+      background-image: url("../img/triangle.png");
     }
   }
 

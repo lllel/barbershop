@@ -77,6 +77,14 @@
   }
 }
 
+.login-menu__input:hover {
+  border-color: $brown-color-hs1213201189;
+}
+
+.login-menu__input:focus {
+  border-color: $grey-color-hsl153153153;
+}
+
 .login-menu__container-checkbox {
   display: flex;
   flex-direction: row;
@@ -91,6 +99,7 @@
   font-size: $font-size-small;
   line-height: $line-height-medium-big;
   color: $black-color;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -103,6 +112,18 @@
     border: 1px solid $grey-color-hsl229221213;
     background-color: $white-color;
   }
+}
+
+.login-menu__checkbox-label:hover::before {
+  border-color: $brown-color-hs1213201189;
+}
+
+.login-menu__checkbox-label:focus::before {
+  border-color: $grey-color-hsl153153153;
+}
+
+.login-menu__checkbox-label:active::before {
+  background-color: $brown-color-hs1213201189;
 }
 
 .login-menu__remember-link {
@@ -135,9 +156,20 @@
   text-transform: uppercase;
   background-color: $brown-color-hsl3010180;
   border: none;
+  cursor: pointer;
 
   & span {
     display: none;
+  }
+
+  &:hover {
+    background-color: $brown-color-hs1067756;
+    transition: 0.2s;
+  }
+
+  &:active {
+    color: $brown-color-hs1151131116;
+    transition: 0.2s;
   }
 }
 
@@ -158,6 +190,17 @@
   background-color: transparent;
   text-decoration: none;
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+.login-menu__checkbox-input:checked + .login-menu__checkbox-label {
+  &::before {
+    content: "";
+    background-image: url("../img/icon-ok.svg");
+    background-repeat: no-repeat;
+    background-size: 23px 17px;
+    background-position: center;
+  }
 }
 
 @media (min-width: $tablet-width) {

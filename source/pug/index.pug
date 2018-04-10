@@ -30,10 +30,9 @@ block main
     p.intro__legend-bottom * — приведённые данные ложь
   section.slider-description
     h2.visually-hidden слайдер
-    div.slider-description__items
-      +slideDescription('быстро', 'Мы делаем свою работу быстро! Два часа пролетят незаметно и Вы — счастливый обладатель стильной стрижки-минутки')
-      +slideDescription('круто', 'Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино. Во всяком случае внешне.')
-      +slideDescription('дорого', 'Наши мастера — профессионалы своего делаи не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?')
+    +slideDescription('быстро', 'Мы делаем свою работу быстро! Два часа пролетят незаметно и Вы — счастливый обладатель стильной стрижки-минутки', ' slider-description__slide--active')
+    +slideDescription('круто', 'Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино. Во всяком случае внешне.', '')
+    +slideDescription('дорого', 'Наши мастера — профессионалы своего дела и не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?', '')
     ul.buttons.slider-description__buttons
       li.buttons__button
         input#buttons__btn1.buttons__input.visually-hidden(type='radio' name='slider-description' checked)
@@ -47,10 +46,14 @@ block main
   section.news
     div.news__wrapper
       h2.title.news__title новости и акции
-      div.news__container
+      div.news__container.news__container--active
         +newsItem('29', 'сент', 'Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.')
-      div.news__container
+      div.news__container.news__container--active
         +newsItem('19', 'сент', 'В нашей команде пополнение, Борис «Бритва» Стригунец, пополнил наши стройные ряды. Спешите записаться!')
+      div.news__container
+        +newsItem('9', 'сент', 'Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!')
+      div.news__container
+        +newsItem('9', 'сент', 'Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!')
       div.news__container
         +newsItem('9', 'сент', 'Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!')
       a.news__button(href='#') показать все
@@ -59,7 +62,9 @@ block main
       h2.title.slider-reviews__title отзывы о нас
       a.slider-reviews__write-review(href='#') оставить свой
       div.slider-reviews__items
-        +slideReview('Трэвис Баркер', 'Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!', 'photo1')
+        +slideReview('Трэвис Баркер', 'Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!', 'photo1', ' slider-reviews__slide--active')
+        +slideReview('Name2', 'Text2', 'photo1', '')
+        +slideReview('Name3', 'Text3', 'photo1', '')
         button.slider-reviews__button-arrow.slider-reviews__button-arrow--prev
         button.slider-reviews__button-arrow.slider-reviews__button-arrow--next
       ul.buttons.slider-reviews__buttons

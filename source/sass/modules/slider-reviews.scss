@@ -39,6 +39,11 @@
 
 .slider-reviews__slide {
   position: relative;
+  display: none;
+}
+
+.slider-reviews__slide--active {
+  display: block;
 }
 
 .slider-reviews__title {
@@ -99,6 +104,8 @@
 
   .slider-reviews__items {
     position: relative;
+    width: 100%;
+    min-height: 161px;
     margin-top: 37px;
     border: 1px solid $grey-color-hsl229221213;
 
@@ -221,6 +228,7 @@
 
   .slider-reviews__items {
     width: calc(100% - 135px);
+    min-height: 164px;
     margin: 35px auto 0;
 
     &::after {

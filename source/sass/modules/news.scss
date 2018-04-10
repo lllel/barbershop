@@ -20,11 +20,10 @@
   display: none;
   min-height: 70px;
   cursor: pointer;
+}
 
-  &:nth-child(2),
-  &:nth-child(3) {
-    display: block;
-  }
+.news__container--active {
+  display: block;
 }
 
 .news__container:hover .news__data-container {
@@ -184,13 +183,17 @@
   }
 
   .news__wrapper {
+    justify-content: flex-start;
     width: 960px;
     padding: 0;
   }
 
   .news__container {
-    display: block;
     width: 33.33%;
+
+    &:nth-child(4) {
+      display: block;
+    }
   }
 
   .news__data-container {

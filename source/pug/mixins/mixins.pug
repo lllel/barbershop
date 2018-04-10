@@ -1,10 +1,10 @@
-mixin slideDescription (title, info)
-  div.slider-description__slide
+mixin slideDescription (title, info, prefix)
+  div(class=`slider-description__slide${prefix}`)
     h2.slider-description__title= title
     p.slider-description__info= info
 
-mixin slideReview (userName, info, img)
-  div.slider-reviews__slide
+mixin slideReview (userName, info, img, prefix)
+  div(class=`slider-reviews__slide${prefix}`)
     h2.slider-reviews__user-name= userName
     p.slider-reviews__review= info
     picture
