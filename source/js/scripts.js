@@ -1,8 +1,32 @@
+let body = document.querySelector('body');
 let navMain = document.querySelector('.nav-main');
 let currentItem = document.querySelectorAll('.nav-main__link:not([href])');
 
 navMain.classList.remove('no-js');
 navMain.classList.remove('active-menu');
+
+// ПОЛИФИЛЛ ДЛЯ CLOSEST
+(function (ELEMENT) {
+  ELEMENT.matches = ELEMENT.matches ||
+    ELEMENT.mozMatchesSelector ||
+    ELEMENT.msMatchesSelector ||
+    ELEMENT.oMatchesSelector ||
+    ELEMENT.webkitMatchesSelector;
+
+  ELEMENT.closest = ELEMENT.closest || function closest(selector) {
+    let element = this;
+
+    while (element) {
+      if (element.matches(selector)) {
+        return element;
+
+      } else {
+        element = element.parentElement;
+      }
+    }
+    return null;
+  };
+}(Element.prototype));
 
 // ОТКРЫТИЕ/ЗАКРЫТИЕ МОДАЛЬНОГО МЕНЮ
 class ModalMenu {
@@ -13,10 +37,24 @@ class ModalMenu {
 
   openMenu() {
     this.elem.classList.add('active-menu');
+
+    document.addEventListener('keydown', (evt) => {
+      this.onEscPressKeydown(evt);
+    });
   }
 
   closeMenu() {
     this.elem.classList.remove('active-menu');
+
+    document.removeEventListener('keydown', (evt) => {
+      this.onEscPressKeydown(evt);
+    });
+  }
+
+  onEscPressKeydown(evt) {
+    if (evt.keyCode === 27) {
+      this.closeMenu();
+    }
   }
 
   onButtonClick() {
@@ -29,8 +67,14 @@ class ModalMenu {
   }
 
   init() {
-    this.button.addEventListener('click', () => {
-      this.onButtonClick();
+    document.addEventListener('click', (evt) => {
+      if (this.elem.classList.contains('active-menu') && !evt.target.closest('nav')) {
+        this.closeMenu();
+      }
+    });
+
+    this.button.addEventListener('click', (evt) => {
+      this.onButtonClick(evt);
     });
 
     [].forEach.call(currentItem, function (it) {
@@ -108,7 +152,6 @@ class SliderReview {
   changeDots(num) {
     this.dots[this.last].checked = false;
     this.dots[num].checked = true;
-    this.timer();
   }
 
   timer() {
@@ -144,6 +187,7 @@ class SliderDescription extends SliderReview {
   constructor(options) {
     super(options);
     this.slides = this.elem.querySelectorAll('.slider-description__slide');
+    this.slidesLength = this.slides.length - 1;
   }
 
   hideSlide(num) {
@@ -154,14 +198,12 @@ class SliderDescription extends SliderReview {
     this.slides[num].classList.add('slider-description__slide--active');
   }
 
-  timer() {
-    return null;
-  }
-
   init() {
     [].forEach.call(this.dots, (it, i) => {
       it.addEventListener('click', () => this.changeSlide(i));
     });
+
+    this.timer();
   }
 }
 
@@ -231,39 +273,38 @@ class LoginMenu {
     this.btnCancel = this.elem.querySelector('.login-menu__cancel');
   }
 
-  showMenu() {
+  showLoginMenu() {
     this.elem.classList.remove('login-menu--hidden');
+    body.classList.add('active-modal-menu');
   }
 
-  closeMenu() {
+  closeLoginMenu() {
     this.elem.classList.add('login-menu--hidden');
+    body.classList.remove('active-modal-menu');
   }
 
   onBtnLoginClick(evt) {
     evt.preventDefault();
 
-    this.showMenu();
+    this.showLoginMenu();
   }
 
   onBtnCancelClick() {
-    this.closeMenu();
+    this.closeLoginMenu();
+  }
+
+  onEscPressKeydown(evt) {
+    if (!this.elem.classList.contains('login-menu--hidden') && evt.keyCode === 27) {
+      this.closeLoginMenu();
+    }
   }
 
   init() {
-    // document.querySelector('body').addEventListener('click', (evt) => {
-    //   if (!this.elem.classList.contains('login-menu--hidden') && evt.target !== this.elem) {
-    //     evt.stopPropagation();
-    //     return;
-    //   }
-    //
-    //   console.log(evt.target);
-    // });
-    this.btnLogin.addEventListener('click', (evt) => this.onBtnLoginClick(evt));
-    this.btnLogin.addEventListener('keydown', (evt) => {
-      if (!this.elem.classList.contains('login-menu--hidden') && evt.keyCode === 27) {
-        this.onBtnCancelClick();
-      }
+    document.addEventListener('keydown', (e) => {
+      this.onEscPressKeydown(e);
     });
+
+    this.btnLogin.addEventListener('click', (evt) => this.onBtnLoginClick(evt));
     this.btnCancel.addEventListener('click', () => this.onBtnCancelClick());
   }
 }

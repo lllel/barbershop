@@ -7,10 +7,12 @@
   z-index: 15;
   background-color: $grey-color-hsl248245245;
   box-shadow: 0 15px 70px 0 $black-color;
+  transition: 0.4s ease;
 }
 
 .login-menu--hidden {
-  display: none;
+  top: -1000px;
+  transition: 0.4s ease;
 }
 
 .login-menu__title {
@@ -205,11 +207,17 @@
 
 @media (min-width: $tablet-width) {
   .login-menu {
-    top: 129px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     width: 460px;
     min-height: 500px;
+    transition: 0.4s ease;
+  }
+
+  .login-menu--hidden {
+    top: -1000px;
+    transition: 0.4s ease;
   }
 
   .login-menu__cancel {
@@ -305,10 +313,6 @@
 }
 
 @media (min-width: $desktop-width) {
-  .login-menu {
-    top: 110px;
-  }
-
   .login-menu__submit {
     margin-top: 5px;
   }
