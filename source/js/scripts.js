@@ -101,7 +101,7 @@ class SliderReview {
     this.last = 0;
     this.current = 0;
     this.timerId = null;
-    this.timerDelay = 3000;
+    this.timerDelay = 6000;
   }
 
   get prev() {
