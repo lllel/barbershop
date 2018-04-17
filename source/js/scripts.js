@@ -3,7 +3,7 @@ let navMain = document.querySelector('.nav-main');
 let currentItem = document.querySelectorAll('.nav-main__link:not([href])');
 
 navMain.classList.remove('no-js');
-navMain.classList.remove('active-menu');
+navMain.classList.remove('nav-main--active');
 
 // ПОЛИФИЛЛ ДЛЯ CLOSEST
 (function (ELEMENT) {
@@ -36,7 +36,9 @@ class ModalMenu {
   }
 
   openMenu() {
-    this.elem.classList.add('active-menu');
+    this.elem.classList.remove('nav-main--hidden');
+    this.elem.classList.add('nav-main--active');
+    this.elem.classList.add('animation-play');
 
     document.addEventListener('keydown', (evt) => {
       this.onEscPressKeydown(evt);
@@ -44,7 +46,9 @@ class ModalMenu {
   }
 
   closeMenu() {
-    this.elem.classList.remove('active-menu');
+    this.elem.classList.add('nav-main--hidden');
+    this.elem.classList.remove('nav-main--active');
+    this.elem.classList.add('animation-play');
 
     document.removeEventListener('keydown', (evt) => {
       this.onEscPressKeydown(evt);
@@ -58,7 +62,7 @@ class ModalMenu {
   }
 
   onButtonClick() {
-    if (this.elem.classList.contains('active-menu')) {
+    if (this.elem.classList.contains('nav-main--active')) {
       this.closeMenu();
 
     } else {
@@ -68,7 +72,7 @@ class ModalMenu {
 
   init() {
     document.addEventListener('click', (evt) => {
-      if (this.elem.classList.contains('active-menu') && !evt.target.closest('nav')) {
+      if (this.elem.classList.contains('nav-main--active') && (!evt.target.closest('.nav-main') || evt.target.className === 'header-main__wrapper')) {
         this.closeMenu();
       }
     });
@@ -313,14 +317,12 @@ class LoginMenu {
   showLoginMenu() {
     this.elem.classList.remove('login-menu--hidden');
     this.elem.classList.add('login-menu--active');
-    this.elem.classList.add('login-menu--animation-play');
     body.classList.add('active-modal-menu');
   }
 
   closeLoginMenu() {
     this.elem.classList.add('login-menu--hidden');
     this.elem.classList.remove('login-menu--active');
-    this.elem.classList.remove('login-menu--animation-play');
     body.classList.remove('active-modal-menu');
   }
 

@@ -1,3 +1,7 @@
+.animation-play {
+  animation-play-state: running;
+}
+
 @keyframes shine {
   0% {
     opacity: 0;
@@ -22,6 +26,99 @@
   }
 }
 
+@keyframes openModalMenu-middleLine {
+  0% {
+    background-color: $white-color;
+  }
+
+  70% {
+    background-color: $white-color;
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes openModalMenu-topLine {
+  0% {
+    top: -8px;
+  }
+
+  70% {
+    top: 0;
+    transform: rotate(0);
+  }
+
+  100% {
+    top: 0;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes openModalMenu-bottomLine {
+  0% {
+    top: 8px;
+  }
+
+  80% {
+    top: 0;
+    transform: rotate(0);
+  }
+
+  100% {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes closeModalMenu-middleLine {
+  0% {
+    background-color: transparent;
+  }
+
+  70% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: $white-color;
+  }
+}
+
+@keyframes closeModalMenu-topLine {
+  0% {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  70% {
+    top: 0;
+    transform: rotate(0);
+  }
+
+  100% {
+    top: -8px;
+    transform: rotate(0);
+  }
+}
+
+@keyframes closeModalMenu-bottomLine {
+  0% {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  80% {
+    top: 0;
+    transform: rotate(0);
+  }
+
+  100% {
+    top: 8px;
+    transform: rotate(0);
+  }
+}
 
 @keyframes openLoginMenu {
   0% {

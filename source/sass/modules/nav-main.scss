@@ -93,6 +93,7 @@
   .nav-main__items {
     height: 0;
     min-height: 0;
+    transition: 0.1s ease;
   }
 
   .nav-main__item {
@@ -118,38 +119,6 @@
     padding-right: 20px;
   }
 
-  .nav-main__open-menu:active span {
-    transition: opacity 0.2s;
-    opacity: 0.4;
-  }
-
-  .nav-main.active-menu .nav-main__open-menu {
-    position: static;
-    width: 87px;
-  }
-
-  .nav-main.active-menu .nav-main__items {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    min-height: 568px;
-    width: 100%;
-  }
-
-  .nav-main.active-menu .nav-main__item {
-    display: flex;
-    background-color: $brown-color-hsl3010180;
-    box-shadow: inset 15px 0 15px -9px $brown-color-hs825841;
-
-    &:last-child {
-      background-color: $brown-color-hs1067756;
-    }
-  }
-
-  .nav-main.active-menu .nav-main__link:not([href]) {
-    justify-content: flex-start;
-  }
-
   .nav-main__open-menu span {
     position: relative;
     display: block;
@@ -162,7 +131,6 @@
       content: "";
       position: absolute;
       top: -8px;
-      left: 0;
       display: block;
       width: 36px;
       height: 2px;
@@ -173,7 +141,6 @@
       content: "";
       position: absolute;
       top: 8px;
-      left: 0;
       display: block;
       width: 36px;
       height: 2px;
@@ -181,21 +148,106 @@
     }
   }
 
-  .nav-main.active-menu .nav-main__open-menu span {
-    background-color: transparent;
+  .nav-main.nav-main--active .nav-main__open-menu {
+    position: static;
+    width: 87px;
+  }
+
+  .nav-main.nav-main--active .nav-main__items {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 568px;
+    width: 100%;
+  }
+
+  .nav-main.nav-main--active .nav-main__item {
+    display: flex;
+    background-color: $brown-color-hsl3010180;
+    box-shadow: inset 15px 0 15px -9px $brown-color-hs825841;
+
+    &:last-child {
+      background-color: $brown-color-hs1067756;
+    }
+  }
+
+  .nav-main.nav-main--active .nav-main__link:not([href]) {
+    justify-content: flex-start;
+  }
+
+  // Анимация закрытия кнопки
+  .nav-main.nav-main--hidden .nav-main__open-menu span {
+    @include animationModalMenu();
+
+    animation-name: closeModalMenu-middleLine;
 
     &::before {
       content: "";
-      top: 0;
-      transform: rotate(45deg);
-      background-color: $white-color;
+
+      @include animationModalMenu();
+
+      animation-name: closeModalMenu-topLine;
     }
 
     &::after {
       content: "";
-      top: 0;
-      transform: rotate(-45deg);
-      background-color: $white-color;
+
+      @include animationModalMenu();
+
+      animation-name: closeModalMenu-bottomLine;
+    }
+  }
+
+  // Анимация открытия кнопки
+  .nav-main.nav-main--active .nav-main__open-menu span {
+    @include animationModalMenu();
+
+    animation-name: openModalMenu-middleLine;
+
+    &::before {
+      content: "";
+
+      @include animationModalMenu();
+
+      animation-name: openModalMenu-topLine;
+    }
+
+    &::after {
+      content: "";
+
+      @include animationModalMenu();
+
+      animation-name: openModalMenu-bottomLine;
+    }
+  }
+
+  // Запуск анимации по клику
+  .nav-main.nav-main--active.animation-play .nav-main__open-menu span {
+    animation-play-state: running;
+
+    &::before {
+      content: "";
+      animation-play-state: running;
+    }
+
+    &::after {
+      content: "";
+      animation-play-state: running;
+    }
+  }
+
+  // Запуск анимации по клику
+  .nav-main.nav-main--hidden.animation-play .nav-main__open-menu span {
+    animation-play-state: running;
+
+    &::before {
+      content: "";
+      animation-play-state: running;
+    }
+
+    &::after {
+      content: "";
+      animation-play-state: running;
     }
   }
 
@@ -207,30 +259,35 @@
     display: none;
   }
 
-  .nav-main.active-menu .nav-main__link:hover,
+  .nav-main__open-menu:active span {
+    transition: opacity 0.2s;
+    opacity: 0.4;
+  }
+
+  .nav-main.nav-main--active .nav-main__link:hover,
   .nav-main__login:hover {
     transition: 0.2s;
     background-color: $brown-color-hs11179070;
     box-shadow: inset 15px 0 15px -9px $brown-color-hs825841;
   }
 
-  .nav-main.active-menu .nav-main__link:active {
+  .nav-main.nav-main--active .nav-main__link:active {
     transition: 0.2s;
     color: $brown-color-hs1151131116;
     background-color: $brown-color-hs1067756;
     box-shadow: inset 15px 0 15px -9px $brown-color-hs825841;
   }
 
-  .nav-main.active-menu .nav-main__link:not([href]):hover {
+  .nav-main.nav-main--active .nav-main__link:not([href]):hover {
     background-color: transparent;
     box-shadow: none;
   }
 
-  .nav-main.active-menu .nav-main__link:not([href]):active {
+  .nav-main.nav-main--active .nav-main__link:not([href]):active {
     color: $white-color;
   }
 
-  .nav-main.active-menu .nav-main__login:active {
+  .nav-main.nav-main--active .nav-main__login:active {
     color: $brown-color-hs1151131116;
     box-shadow: inset 15px 0 15px -9px $brown-color-hs825841;
   }
