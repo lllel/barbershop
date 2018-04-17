@@ -102,6 +102,11 @@ class SliderReview {
     this.current = 0;
     this.timerId = null;
     this.timerDelay = 6000;
+    // this.startTouch = null;
+    // this.touch = null;
+    // this.currentSlideTouch = null;
+    // this.duration = null;
+    // this.activeDuration = null;
   }
 
   get prev() {
@@ -171,6 +176,38 @@ class SliderReview {
     this.btnNext.addEventListener('click', () => this.changeSlide(this.next));
 
     this.timer();
+
+    // ========================================  ДОДЕЛАТЬ ====================================================
+
+    // this.elem.addEventListener('touchstart', (evtStart) => {
+    //   this.startTouch = evtStart.targetTouches[0].clientX;
+    //   this.elem.querySelector('slider-reviews__slide--active').classList.remove('slider-reviews__slide--active');
+    // });
+    //
+    // this.elem.addEventListener('touchmove', (evtMove) => {
+    //   if (evtMove.targetTouches.length === 1) {
+    //     this.touch = evtMove.targetTouches[0];
+    //     this.currentSlideTouch = this.elem.querySelector('slider-reviews__slide--active');
+    //     this.duration = this.startTouch - this.touch;
+    //     this.currentSlideTouch.style.right = this.duration + 'px';
+    //   }
+    // });
+    //
+    // this.elem.addEventListener('touchend', () => {
+    //   this.elem.querySelector('slider-reviews__slide--active').classList.remove('slider-reviews__slide--active');
+    //   this.currentSlideTouch.style.right = '';
+    //   this.activeDuration = window.innerWidth / 3;
+    //
+    //   if (Math.abs(event.changedTouches[0].clientX - this.startTouch) > 20) {
+    //     if (event.changedTouches[0].clientX < this.activeDuration) {
+    //       this.changeSlide(this.next);
+    //     } else if ((window.innerWidth - event.changedTouches[0].clientX) < this.activeDuration) {
+    //       this.changeSlide(this.prev);
+    //     }
+    //   }
+    // });
+
+    // ==============================================================================================================
   }
 }
 
@@ -275,11 +312,15 @@ class LoginMenu {
 
   showLoginMenu() {
     this.elem.classList.remove('login-menu--hidden');
+    this.elem.classList.add('login-menu--active');
+    this.elem.classList.add('login-menu--animation-play');
     body.classList.add('active-modal-menu');
   }
 
   closeLoginMenu() {
     this.elem.classList.add('login-menu--hidden');
+    this.elem.classList.remove('login-menu--active');
+    this.elem.classList.remove('login-menu--animation-play');
     body.classList.remove('active-modal-menu');
   }
 
@@ -294,7 +335,7 @@ class LoginMenu {
   }
 
   onEscPressKeydown(evt) {
-    if (!this.elem.classList.contains('login-menu--hidden') && evt.keyCode === 27) {
+    if (this.elem.classList.contains('login-menu--active') && evt.keyCode === 27) {
       this.closeLoginMenu();
     }
   }

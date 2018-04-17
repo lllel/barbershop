@@ -4,6 +4,28 @@
   outline: 1px solid $grey-color-hsl230222215;
 }
 
+.card__container {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    display: block;
+    width: 15%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 1%, rgba(255, 255, 255, 0.4) 30%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0.75) 65%, rgba(255, 255, 255, 0.05) 100%);
+    transform: rotate(15deg);
+    opacity: 0;
+    animation-name: shine;
+    animation-delay: 3s;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
+}
+
 .card__img {
   display: block;
   width: 280px;
@@ -183,6 +205,10 @@
     height: auto;
     min-height: 545px;
     margin: 0;
+  }
+
+  .card__container {
+    width: 480px;
   }
 
   .card__img {

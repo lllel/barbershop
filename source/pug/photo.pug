@@ -16,18 +16,19 @@ block main
     div.our-work__container
       article.card.our-work__card.our-work__card--work-month
         h2.visually-hidden Работа месяца
-        picture
-          source(media='(min-width: 1200px)' type='image/webp'
-            srcset='img/photo2-desktop.webp 1x')
-          source(media='(min-width: 1200px)'
-            srcset='img/photo2-desktop.jpg 1x')
-          source(media='(min-width: 768px)' type='image/webp'
-            srcset='img/photo2-tablet.webp 1x')
-          source(media='(min-width: 768px)'
-            srcset='img/photo2-tablet.jpg 1x')
-          source(media='(min-width: 320px)' type='image/webp'
-            srcset='img/photo2.webp 1x')
-          img.card__img.card__img--our-work(src='img/photo2.jpg' alt='Фото работы')
+        div.card__container
+          picture
+            source(media='(min-width: 1200px)' type='image/webp'
+              srcset='img/photo2-desktop.webp 1x')
+            source(media='(min-width: 1200px)'
+              srcset='img/photo2-desktop.jpg 1x')
+            source(media='(min-width: 768px)' type='image/webp'
+              srcset='img/photo2-tablet.webp 1x')
+            source(media='(min-width: 768px)'
+              srcset='img/photo2-tablet.jpg 1x')
+            source(media='(min-width: 320px)' type='image/webp'
+              srcset='img/photo2.webp 1x')
+            img.card__img.card__img--our-work(src='img/photo2.jpg' alt='Фото работы')
         div.card__feature-container
           p.card__feature работа месяца
         div.card__user-item
