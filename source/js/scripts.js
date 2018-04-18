@@ -81,8 +81,8 @@ class ModalMenu {
       this.onButtonClick(evt);
     });
 
-    [].forEach.call(currentItem, function (it) {
-      it.parentElement.style.display = 'flex';
+    [].forEach.call(currentItem, (it) => {
+      it.parentElement.classList.add('nav-main__item--active');
     });
   }
 }
@@ -106,11 +106,6 @@ class SliderReview {
     this.current = 0;
     this.timerId = null;
     this.timerDelay = 6000;
-    // this.startTouch = null;
-    // this.touch = null;
-    // this.currentSlideTouch = null;
-    // this.duration = null;
-    // this.activeDuration = null;
   }
 
   get prev() {
@@ -180,38 +175,6 @@ class SliderReview {
     this.btnNext.addEventListener('click', () => this.changeSlide(this.next));
 
     this.timer();
-
-    // ========================================  ДОДЕЛАТЬ ====================================================
-
-    // this.elem.addEventListener('touchstart', (evtStart) => {
-    //   this.startTouch = evtStart.targetTouches[0].clientX;
-    //   this.elem.querySelector('slider-reviews__slide--active').classList.remove('slider-reviews__slide--active');
-    // });
-    //
-    // this.elem.addEventListener('touchmove', (evtMove) => {
-    //   if (evtMove.targetTouches.length === 1) {
-    //     this.touch = evtMove.targetTouches[0];
-    //     this.currentSlideTouch = this.elem.querySelector('slider-reviews__slide--active');
-    //     this.duration = this.startTouch - this.touch;
-    //     this.currentSlideTouch.style.right = this.duration + 'px';
-    //   }
-    // });
-    //
-    // this.elem.addEventListener('touchend', () => {
-    //   this.elem.querySelector('slider-reviews__slide--active').classList.remove('slider-reviews__slide--active');
-    //   this.currentSlideTouch.style.right = '';
-    //   this.activeDuration = window.innerWidth / 3;
-    //
-    //   if (Math.abs(event.changedTouches[0].clientX - this.startTouch) > 20) {
-    //     if (event.changedTouches[0].clientX < this.activeDuration) {
-    //       this.changeSlide(this.next);
-    //     } else if ((window.innerWidth - event.changedTouches[0].clientX) < this.activeDuration) {
-    //       this.changeSlide(this.prev);
-    //     }
-    //   }
-    // });
-
-    // ==============================================================================================================
   }
 }
 
