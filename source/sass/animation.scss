@@ -2,6 +2,16 @@
   animation-play-state: running;
 }
 
+@keyframes page-top-move {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
 @keyframes shine {
   0% {
     opacity: 0;

@@ -6,11 +6,9 @@
 
 .nav-main__items {
   display: block;
-  position: relative;
   min-height: 100%;
   width: 100%;
   margin: 0;
-  margin-left: auto;
   padding: 0;
   z-index: 10;
   background-color: $brown-color-hs1067756;
@@ -71,17 +69,14 @@
 }
 
 .nav-main__open-menu {
-  position: absolute;
-  top: 0;
-  right: 0;
   display: block;
   width: 71px;
   height: 50px;
-  margin-left: auto;
   z-index: 11;
   background-color: $brown-color-hs1067756;
   border: 0;
   cursor: pointer;
+  transition: 0.3s ease;
 
   &:hover {
     transition: background-color 0.2s;
@@ -93,9 +88,8 @@
   .nav-main__items {
     display: flex;
     flex-direction: column;
-    height: 50px;
-    min-height: 50px;
-    overflow: hidden;
+    height: auto;
+    min-height: 567px;
     transition: 0.3s ease;
   }
 
@@ -130,7 +124,17 @@
   }
 
   .nav-main__item--active {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    box-shadow: none;
     order: -1;
+  }
+
+  .nav-main__open-menu {
+    position: absolute;
+    right: 100%;
   }
 
   .nav-main__open-menu span {
@@ -162,18 +166,32 @@
     }
   }
 
+  .header-main__wrapper--menu {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: auto;
+    transition: 0.3s ease;
+  }
+
   .nav-main.nav-main--active .nav-main__open-menu {
-    position: static;
+    position: absolute;
+    left: 0;
     width: 87px;
   }
 
+  .nav-main.nav-main--active .header-main__wrapper--menu {
+    right: 0;
+  }
+
   .nav-main.nav-main--active .nav-main__items {
-    display: flex;
-    flex-direction: column;
+    position: absolute;
+    right: 0;
+    height: auto;
     min-height: 568px;
-    width: 100%;
-    transition: 0.3s ease;
-    overflow: hidden;
+    min-width: calc(100% - 87px);
+    width: auto;
   }
 
   .nav-main.nav-main--active .nav-main__link:not([href]) {
@@ -181,7 +199,10 @@
   }
 
   .nav-main.nav-main--active .nav-main__item--active {
+    position: static;
     order: 0;
+    transform: translateX(0);
+    box-shadow: inset 15px 0 15px -9px $brown-color-hs825841;
   }
 
   // Анимация закрытия кнопки

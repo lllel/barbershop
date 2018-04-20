@@ -26,10 +26,6 @@
   animation-play-state: running;
 }
 
-//.login-menu--animation-play {
-//  animation-play-state: running;
-//}
-
 .login-menu__title {
   margin-top: 33px;
   margin-bottom: 0;
@@ -235,13 +231,8 @@
   .login-menu--active {
     top: 0;
     left: 0;
-    right: 0;
+    //right: 0;
     margin: auto;
-  }
-
-  .login-menu--hidden {
-    left: 0;
-    right: 0;
   }
 
   .login-menu__cancel {
