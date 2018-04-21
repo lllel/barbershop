@@ -46,16 +46,18 @@ block main
   section.news
     div.news__wrapper
       h2.title.news__title новости и акции
-      div.news__container.news__container--active
+      div.news__container
         +newsItem('29', 'сент', 'Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.')
-      div.news__container.news__container--active
+      div.news__container
         +newsItem('19', 'сент', 'В нашей команде пополнение, Борис «Бритва» Стригунец, пополнил наши стройные ряды. Спешите записаться!')
-      div.news__container
-        +newsItem('9', 'сент', 'Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!')
-      div.news__container
-        +newsItem('9', 'сент', 'Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!')
-      div.news__container
-        +newsItem('9', 'сент', 'Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!')
+      div.news__wrap
+        div.news__wrap-items
+          div.news__container
+            +newsItem('9', 'сент', 'Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!')
+          div.news__container
+            +newsItem('9', 'сент', 'Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!')
+          div.news__container
+            +newsItem('9', 'сент', 'Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!')
       a.news__button(href='#') показать все
   section.slider-reviews
     div.slider-reviews__wrapper

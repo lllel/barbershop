@@ -226,31 +226,29 @@ if (document.querySelector('.slider-description')) {
 class News {
   constructor(options) {
     this.elem = options.elem;
-    this.news = this.elem.querySelectorAll('.news__container');
-    this.newsLength = this.elem.querySelectorAll('.news__container').length;
+    this.wrap = this.elem.querySelector('.news__wrap');
+    this.wrapItems = this.wrap.querySelector('.news__wrap-items');
+    this.wrapHeight = this.wrapItems.clientHeight;
     this.button = this.elem.querySelector('.news__button');
-    this.showCount = 2;
   }
 
   hideNews() {
-    for (let i = this.showCount; i < this.newsLength; i++) {
-      this.news[i].classList.remove('news__container--active');
-    }
-
     this.elem.classList.remove('news--active');
+    this.wrap.style.height = `${0}px`;
     this.button.textContent = 'показать все';
   }
 
   showNews() {
-    for (let i = this.showCount; i < this.newsLength; i++) {
-      this.news[i].classList.add('news__container--active');
-    }
-
     this.elem.classList.add('news--active');
+    this.wrap.style.height = `${this.wrapHeight + 10}px`;
     this.button.textContent = 'скрыть';
   }
 
   init() {
+    [].forEach.call(this.wrapItems.querySelectorAll('.news__container'), (it) => {
+      it.classList.add('news__container--hidden');
+    });
+
     this.button.addEventListener('click', (evt) => {
       evt.preventDefault();
 
@@ -263,9 +261,10 @@ class News {
     });
   }
 }
+let news = null;
 
 if (document.querySelector('.news')) {
-  const news = new News({
+  news = new News({
     elem: document.querySelector('.news')
   });
 
@@ -386,3 +385,72 @@ const pageMove = new PageMove({
 });
 
 pageMove.init();
+
+
+// БРЕЙКПОИНТЫ
+const mediaQueryList320 = window.matchMedia('(min-width: 320px) and (max-width: 767px)');
+const mediaQueryList768 = window.matchMedia('(min-width: 768px) and (max-width: 1199px)');
+const mediaQueryList1200 = window.matchMedia('(min-width: 1200px)');
+
+const newsWrapper = document.querySelector('.news__wrapper');
+const newsContainerHidden = document.querySelectorAll('.news__container--hidden');
+const newsWrapElement = document.querySelector('.news__wrap-items');
+
+function isWidthChange320(mql) {
+  if (mql.matches) {
+
+    // Меняем высоту контейнера при каждом брейкпоинте
+    if (document.querySelector('.news')) {
+      news.wrapHeight = 0;
+      news.wrapHeight = news.wrapItems.clientHeight;
+    }
+
+    // Скрывающиеся блоки с новостями по своим местам
+    [].forEach.call(newsContainerHidden, (it) => {
+      if (!newsWrapElement.contains(it)) {
+        newsWrapElement.appendChild(it);
+      }
+    });
+  }
+}
+
+mediaQueryList320.addListener(isWidthChange320);
+isWidthChange320(mediaQueryList320);
+
+function isWidthChange768(mql) {
+  if (mql.matches) {
+
+    // Меняем высоту контейнера при каждом брейкпоинте
+    if (document.querySelector('.news')) {
+      news.wrapHeight = 0;
+      news.wrapHeight = Math.max(news.wrapItems.clientHeight, 224); // Пофиксить!!!
+    }
+
+    // Скрывающиеся блоки с новостями по своим местам
+    [].forEach.call(newsContainerHidden, (it) => {
+      if (!newsWrapElement.contains(it)) {
+        newsWrapElement.appendChild(it);
+      }
+    });
+  }
+}
+
+mediaQueryList768.addListener(isWidthChange768);
+isWidthChange768(mediaQueryList768);
+
+function isWidthChange1200(mql) {
+  if (mql.matches) {
+
+    // Меняем высоту контейнера при каждом брейкпоинте
+    if (document.querySelector('.news')) {
+      news.wrapHeight = 0;
+      news.wrapHeight = news.wrapItems.clientHeight;
+    }
+
+    // Один блок новостей переселяется в другой контейнер
+    newsWrapper.appendChild(newsWrapElement.firstElementChild);
+  }
+}
+
+mediaQueryList1200.addListener(isWidthChange1200);
+isWidthChange1200(mediaQueryList1200);
