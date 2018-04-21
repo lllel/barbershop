@@ -252,6 +252,8 @@ class News {
     this.button.addEventListener('click', (evt) => {
       evt.preventDefault();
 
+      this.wrapHeight = this.wrapItems.clientHeight;
+
       if (this.elem.classList.contains('news--active')) {
         this.hideNews();
 
@@ -392,17 +394,16 @@ const mediaQueryList320 = window.matchMedia('(min-width: 320px) and (max-width: 
 const mediaQueryList768 = window.matchMedia('(min-width: 768px) and (max-width: 1199px)');
 const mediaQueryList1200 = window.matchMedia('(min-width: 1200px)');
 
+const newsSection = document.querySelector('.news');
 const newsWrapper = document.querySelector('.news__wrapper');
 const newsContainerHidden = document.querySelectorAll('.news__container--hidden');
 const newsWrapElement = document.querySelector('.news__wrap-items');
+const newsButton = document.querySelector('.news__button');
 
 function isWidthChange320(mql) {
   if (mql.matches) {
-
-    // Меняем высоту контейнера при каждом брейкпоинте
-    if (document.querySelector('.news')) {
-      news.wrapHeight = 0;
-      news.wrapHeight = news.wrapItems.clientHeight;
+    if (newsSection && newsSection.classList.contains('news--active')) {
+      newsButton.click();
     }
 
     // Скрывающиеся блоки с новостями по своим местам
@@ -419,11 +420,8 @@ isWidthChange320(mediaQueryList320);
 
 function isWidthChange768(mql) {
   if (mql.matches) {
-
-    // Меняем высоту контейнера при каждом брейкпоинте
-    if (document.querySelector('.news')) {
-      news.wrapHeight = 0;
-      news.wrapHeight = Math.max(news.wrapItems.clientHeight, 224); // Пофиксить!!!
+    if (newsSection && newsSection.classList.contains('news--active')) {
+      newsButton.click();
     }
 
     // Скрывающиеся блоки с новостями по своим местам
@@ -440,11 +438,8 @@ isWidthChange768(mediaQueryList768);
 
 function isWidthChange1200(mql) {
   if (mql.matches) {
-
-    // Меняем высоту контейнера при каждом брейкпоинте
-    if (document.querySelector('.news')) {
-      news.wrapHeight = 0;
-      news.wrapHeight = news.wrapItems.clientHeight;
+    if (newsSection && newsSection.classList.contains('news--active')) {
+      newsButton.click();
     }
 
     // Один блок новостей переселяется в другой контейнер
