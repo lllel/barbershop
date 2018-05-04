@@ -443,7 +443,9 @@ function isWidthChange1200(mql) {
     }
 
     // Один блок новостей переселяется в другой контейнер
-    newsWrapper.appendChild(newsWrapElement.firstElementChild);
+    if (newsWrapper) {
+      newsWrapper.appendChild(newsWrapElement.firstElementChild);
+    }
   }
 }
 
