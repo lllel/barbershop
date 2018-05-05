@@ -18,16 +18,10 @@ block main
         h2.visually-hidden Работа месяца
         div.card__container
           picture
-            source(media='(min-width: 1200px)' type='image/webp'
-              srcset='img/photo2-desktop.webp 1x')
             source(media='(min-width: 1200px)'
               srcset='img/photo2-desktop.jpg 1x')
-            source(media='(min-width: 768px)' type='image/webp'
-              srcset='img/photo2-tablet.webp 1x')
             source(media='(min-width: 768px)'
               srcset='img/photo2-tablet.jpg 1x')
-            source(media='(min-width: 320px)' type='image/webp'
-              srcset='img/photo2.webp 1x')
             img.card__img.card__img--our-work(src='img/photo2.jpg' alt='Фото работы')
         div.card__feature-container
           p.card__feature работа месяца
@@ -36,87 +30,69 @@ block main
           p.card__info.card__info--our-work Где я только ни стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!
           ul.card__items
             li.card__item
-              svg(width='22' height='20' aria-label='Иконка - стрижка')
-                use.card__item-img(xlink:href='#icon-scissors-icon')
-              span.card__description стрижка
-            li.card__item
-              svg(width='23' height='22' aria-label='Иконка - бритьё')
-                use.card__item-img(xlink:href='#icon-beard-1')
-              span.card__description бритьё
-            li.card__item
-              svg(width='46' height='16' aria-label='Иконка - усы')
-                use.card__item-img(xlink:href='#icon-mustache')
+            //  svg(width='22' height='20' aria-label='Иконка - стрижка')
+            //    use.card__item-img(xlink:href='#icon-scissors-icon')
+            //  span.card__description стрижка
+            //li.card__item
+            //  svg(width='23' height='22' aria-label='Иконка - бритьё')
+            //    use.card__item-img(xlink:href='#icon-beard-1')
+            //  span.card__description бритьё
+            //li.card__item
+            //  svg(width='46' height='16' aria-label='Иконка - усы')
+            //    use.card__item-img(xlink:href='#icon-mustache')
               span.card__description усы
       article.card.our-work__card
         h2.visually-hidden Работа
         picture
-          source(media='(min-width: 1200px)' type='image/webp'
-            srcset='img/photo3-desktop.webp 1x')
           source(media='(min-width: 1200px)'
             srcset='img/photo3-desktop.jpg 1x')
-          source(media='(min-width: 768px)' type='image/webp'
-            srcset='img/photo3-tablet.webp 1x')
           source(media='(min-width: 768px)'
             srcset='img/photo3-tablet.jpg 1x')
-          source(media='(min-width: 320px)' type='image/webp'
-            srcset='img/photo3.webp 1x')
           img.card__img(src='img/photo3.jpg' alt='Фото работы')
         div.card__user-item
           p.card__user-name Саша Мальцев
           p.card__info Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?
           ul.card__items
             li.card__item
-              svg(width='22' height='20' aria-label='Иконка - стрижка')
-                use.card__item-img(xlink:href='#icon-scissors-icon')
+              //svg(width='22' height='20' aria-label='Иконка - стрижка')
+              //  use.card__item-img(xlink:href='#icon-scissors-icon')
               span.card__description стрижка
       article.card.our-work__card
         h2.visually-hidden Работа
         picture
-          source(media='(min-width: 1200px)' type='image/webp'
-            srcset='img/photo4-desktop.webp 1x')
           source(media='(min-width: 1200px)'
             srcset='img/photo4-desktop.jpg 1x')
-          source(media='(min-width: 768px)' type='image/webp'
-            srcset='img/photo4-tablet.webp 1x')
           source(media='(min-width: 768px)'
             srcset='img/photo4-tablet.jpg 1x')
-          source(media='(min-width: 320px)' type='image/webp'
-            srcset='img/photo4.webp 1x')
           img.card__img(src='img/photo4.jpg' alt='Фото работы')
         div.card__user-item
           p.card__user-name Владимир Иваныч
           p.card__info К зимнему сезону — готов!
           ul.card__items
             li.card__item
-              svg(width='23' height='22' aria-label='Иконка - бритьё')
-                use.card__item-img(xlink:href='#icon-beard-1')
-              span.card__description борода
-            li.card__item
-              svg(width='46' height='16' aria-label='Иконка - усы')
-                use.card__item-img(xlink:href='#icon-mustache')
-              span.card__description усы
+            //  svg(width='23' height='22' aria-label='Иконка - бритьё')
+            //    use.card__item-img(xlink:href='#icon-beard-1')
+            //  span.card__description борода
+            //li.card__item
+            //  svg(width='46' height='16' aria-label='Иконка - усы')
+            //    use.card__item-img(xlink:href='#icon-mustache')
+            //  span.card__description усы
       article.card.our-work__card
         h2.visually-hidden Работа
         picture
-          source(media='(min-width: 1200px)' type='image/webp'
-            srcset='img/photo5-desktop.webp 1x')
           source(media='(min-width: 1200px)'
             srcset='img/photo5-desktop.jpg 1x')
-          source(media='(min-width: 768px)' type='image/webp'
-            srcset='img/photo5-tablet.webp 1x')
           source(media='(min-width: 768px)'
             srcset='img/photo5-tablet.jpg 1x')
-          source(media='(min-width: 320px)' type='image/webp'
-            srcset='img/photo5.webp 1x')
           img.card__img(src='img/photo5.jpg' alt='Фото работы')
         div.card__user-item
           p.card__user-name Винстон Синий
           p.card__info Как только заростаю и волосы начинают мешать видеть — бегом в Бородинский!
           ul.card__items
             li.card__item
-              svg(width='22' height='20' aria-label='Иконка - стрижка')
-                use.card__item-img(xlink:href='#icon-scissors-icon')
-              span.card__description стрижка
+              //svg(width='22' height='20' aria-label='Иконка - стрижка')
+              //  use.card__item-img(xlink:href='#icon-scissors-icon')
+              //span.card__description стрижка
   section.price-list
     h2.price-list__title прейскурант
     ul.price-list__items
@@ -162,8 +138,8 @@ block main
         p.price-list__price 1 000 руб.
     div.ie-flex-bugs-container
       div.price-list__clock
-        svg(width='60' height='60' aria-label='Часы')
-          use.price-list__img(xlink:href='#icon-watches')
+        //svg(width='60' height='60' aria-label='Часы')
+        //  use.price-list__img(xlink:href='#icon-watches')
         p.price-list__time
           span C 10:00 до 14:00
           span  скидка 20%
