@@ -17,12 +17,12 @@ header.header-main
       button.nav-main__open-menu(aria-label="Открыть/Закрыть меню")
         span
       ul.nav-main__items
-        each item, name in menu
-          li.nav-main__item
-            if name === pageName
-              a.nav-main__link= item[1]
-            else
-              a.nav-main__link(href= item[0])= item[1]
+        // each item, name in menu
+        //   li.nav-main__item
+        //     if name === pageName
+        //       a.nav-main__link= item[1]
+        //     else
+        //       a.nav-main__link(href= item[0])= item[1]
 
         li.nav-main__item
           a.nav-main__login(href='#')

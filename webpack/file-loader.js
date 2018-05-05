@@ -3,7 +3,7 @@ module.exports = function () {
     module: {
       rules: [
         {
-          test: /\.(jpg|JPEG|png|svg)$/,
+          test: /\.(jpe?g|png|svg)$/i,
           loader: 'file-loader',
           options: {
             name: 'img/[name].[ext]'
@@ -11,7 +11,7 @@ module.exports = function () {
         },
 
         {
-          test: /\.(woff|woff2)$/,
+          test: /\.(woff|woff2)$/i,
           loader: 'file-loader',
           options: {
             name: 'fonts/[name].[ext]'

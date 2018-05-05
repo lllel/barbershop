@@ -13,7 +13,7 @@ const common = merge([
   {
     entry: {
       app: [
-        './source/js/all.js',
+        './source/js/index.js',
         './source/sass/style.scss'
       ]
     },
