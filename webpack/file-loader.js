@@ -3,6 +3,11 @@ module.exports = function () {
     module: {
       rules: [
         {
+          test: /\.(js|jsx)$/i,
+          loader: 'babel-loader'
+        },
+
+        {
           test: /\.(jpe?g|png|svg)$/i,
           loader: 'file-loader',
           options: {

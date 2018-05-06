@@ -8,7 +8,6 @@ const css = require('./webpack/css');
 const fileLoader = require('./webpack/file-loader');
 const imagemin = require('./webpack/imagemin');
 const copy = require('./webpack/copy');
-const svgSprite = require('./webpack/svg-sprite');
 
 const common = merge([
   {
@@ -23,7 +22,7 @@ const common = merge([
       path: path.join(__dirname, 'build')
     },
 
-    mode: 'none',
+    mode: 'production',
     devtool: 'source-map',
 
     plugins: [
@@ -50,23 +49,13 @@ const common = merge([
         chunks: ['form'],
         template: path.join(__dirname, 'source') + '/pug/form.pug'
       })
-    ],
-
-    module: {
-      rules: [
-        {
-          test: /\.(js|jsx)$/,
-          loader: 'babel-loader'
-        }
-      ]
-    }
+    ]
   },
 
   pug(),
   css(),
   fileLoader(),
-  copy(),
-  svgSprite()
+  copy()
 ]);
 
 module.exports = function (env) {

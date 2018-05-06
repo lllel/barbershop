@@ -4,14 +4,17 @@ import {SliderReview} from './modules/slider-review';
 import {SliderDescription} from './modules/slider-description';
 import {News} from './modules/news';
 import {PageMove} from './modules/page-move';
-import {isWidthChange320, isWidthChange768, isWidthChange1200} from './modules/media-query-list';
+// import {isWidthChange320, isWidthChange768, isWidthChange1200} from './modules/media-query-list';
 
 const mediaQueryList320 = window.matchMedia('(min-width: 320px) and (max-width: 767px)');
 const mediaQueryList768 = window.matchMedia('(min-width: 768px) and (max-width: 1199px)');
 const mediaQueryList1200 = window.matchMedia('(min-width: 1200px)');
 
-const __svg__ = {path: '../img/icon-*.svg', filename: '/img/sprite-svg.svg'};
-require('../../node_modules/webpack-svgstore-plugin/src/helpers/svgxhr')(__svg__);
+const newsSection = document.querySelector('.news');
+const newsWrapper = document.querySelector('.news__wrapper');
+const newsContainerHidden = document.querySelectorAll('.news__container--hidden');
+const newsWrapElement = document.querySelector('.news__wrap-items');
+const newsButton = document.querySelector('.news__button');
 
 // Полифилл для closest
 (function (ELEMENT) {
@@ -82,6 +85,49 @@ const pageMove = new PageMove({
 });
 
 pageMove.init();
+
+function isWidthChange320(mql) {
+  if (mql.matches) {
+    if (newsSection && newsSection.classList.contains('news--active')) {
+      newsButton.click();
+    }
+
+    // Скрывающиеся блоки с новостями по своим местам
+    [].forEach.call(newsContainerHidden, (it) => {
+      if (!newsWrapElement.contains(it)) {
+        newsWrapElement.appendChild(it);
+      }
+    });
+  }
+}
+
+function isWidthChange768(mql) {
+  if (mql.matches) {
+    if (newsSection && newsSection.classList.contains('news--active')) {
+      newsButton.click();
+    }
+
+    // Скрывающиеся блоки с новостями по своим местам
+    [].forEach.call(newsContainerHidden, (it) => {
+      if (!newsWrapElement.contains(it)) {
+        newsWrapElement.appendChild(it);
+      }
+    });
+  }
+}
+
+function isWidthChange1200(mql) {
+  if (mql.matches) {
+    if (newsSection && newsSection.classList.contains('news--active')) {
+      newsButton.click();
+    }
+
+    // Один блок новостей переселяется в другой контейнер
+    if (newsWrapper) {
+      newsWrapper.appendChild(newsWrapElement.firstElementChild);
+    }
+  }
+}
 
 mediaQueryList320.addListener(isWidthChange320);
 isWidthChange320(mediaQueryList320);

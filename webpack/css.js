@@ -13,7 +13,7 @@ module.exports = function () {
               {
                 loader: 'css-loader',
                 options: {
-                  minimize: false,
+                  minimize: true,
                   sourceMap: true
                 }
               },

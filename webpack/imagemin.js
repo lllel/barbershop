@@ -11,8 +11,8 @@ module.exports = function () {
         },
 
         pngquant: {
-          quality: '65-90',
-          speed: 4,
+          quality: '90',
+          speed: 5,
         },
 
         jpegtran: {
@@ -32,7 +32,7 @@ module.exports = function () {
 
         plugins: [
           imageminMozjpeg({
-            quality: 65,
+            quality: 90,
             progressive: true,
           })
         ]
