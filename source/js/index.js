@@ -10,6 +10,9 @@ const mediaQueryList320 = window.matchMedia('(min-width: 320px) and (max-width: 
 const mediaQueryList768 = window.matchMedia('(min-width: 768px) and (max-width: 1199px)');
 const mediaQueryList1200 = window.matchMedia('(min-width: 1200px)');
 
+const __svg__ = {path: '../img/icon-*.svg', filename: '/img/sprite-svg.svg'};
+require('../../node_modules/webpack-svgstore-plugin/src/helpers/svgxhr')(__svg__);
+
 // Полифилл для closest
 (function (ELEMENT) {
   ELEMENT.matches = ELEMENT.matches ||
