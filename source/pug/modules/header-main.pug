@@ -1,4 +1,3 @@
-include ../data/menu.pug
 block vars
   - var headerMainLogo = '';
 
@@ -6,23 +5,32 @@ header.header-main
   div(class=`header-main__logo ${headerMainLogo}`)
     div.header-main__wrapper
       a.header-main__logo-link(href='index.html')
-        //svg.header-main__logo-mobile(width='230' height='30' aria-label="Логотип Барбершоп")
-        //  use.header-main__logo-img(xlink:href='#icon-logo-mobile')
-        //svg.header-main__logo-tablet(width='372' height='104' aria-label="Логотип Барбершоп")
-        //  use.header-main__logo-img(xlink:href='#icon-logo-tablet')
-        //svg.header-main__logo-desktop(width='372' height='155' aria-label="Логотип Барбершоп")
-        //  use.header-main__logo-img(xlink:href='#icon-logo-desktop')
+        svg.header-main__logo-mobile(width='230' height='30' aria-label="Логотип Барбершоп")
+          use.header-main__logo-img(xlink:href='#icon-logo-mobile')
+        svg.header-main__logo-tablet(width='372' height='104' aria-label="Логотип Барбершоп")
+          use.header-main__logo-img(xlink:href='#icon-logo-tablet')
+        svg.header-main__logo-desktop(width='372' height='155' aria-label="Логотип Барбершоп")
+          use.header-main__logo-img(xlink:href='#icon-logo-desktop')
   nav.nav-main.header-main__nav.nav-main--active.no-js
     div.header-main__wrapper.header-main__wrapper--menu
       button.nav-main__open-menu(aria-label="Открыть/Закрыть меню")
         span
       ul.nav-main__items
-        // each item, name in menu
-        //   li.nav-main__item
-        //     if name === pageName
-        //       a.nav-main__link= item[1]
-        //     else
-        //       a.nav-main__link(href= item[0])= item[1]
+        -
+            const menu = {
+              index: ['index.html', 'главная'],
+              photo: ['photo.html', 'наши работы'],
+              form: ['form.html', 'записаться'],
+              contact: ['#', 'контакты'],
+              academy: ['http://htmlacademy.ru', 'html academy']
+            };
+
+        each item, name in menu
+          li.nav-main__item
+            if name === pageName
+              a.nav-main__link= item[1]
+            else
+              a.nav-main__link(href= item[0])= item[1]
 
         li.nav-main__item
           a.nav-main__login(href='#')

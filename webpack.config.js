@@ -8,6 +8,7 @@ const css = require('./webpack/css');
 const fileLoader = require('./webpack/file-loader');
 const imagemin = require('./webpack/imagemin');
 const copy = require('./webpack/copy');
+const svgSprite = require('./webpack/svg-sprite');
 
 const common = merge([
   {
@@ -21,6 +22,7 @@ const common = merge([
       filename: 'js/bundle.js',
       path: path.join(__dirname, 'build')
     },
+
     mode: 'none',
     devtool: 'source-map',
 
@@ -63,7 +65,8 @@ const common = merge([
   pug(),
   css(),
   fileLoader(),
-  copy()
+  copy(),
+  svgSprite()
 ]);
 
 module.exports = function (env) {

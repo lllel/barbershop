@@ -9,8 +9,8 @@ mixin slideReview (userName, info, img, prefix)
     p.slider-reviews__review= info
     picture
       source(media='(min-width: 1200px)'
-        srcset='img/' + img + '-desktop.jpg 1x')
-      img.slider-reviews__img(src='img/' + img + '.jpg' alt='Фото работы')
+        srcset=require('../img/' + img + '-desktop.jpg'))
+      img.slider-reviews__img(src=require('../img/' + img + '.jpg') alt='Фото работы')
 
 mixin newsItem (dataNum, month, info)
   div.news__data-container
