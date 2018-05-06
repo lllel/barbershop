@@ -4,17 +4,6 @@ import {SliderReview} from './modules/slider-review';
 import {SliderDescription} from './modules/slider-description';
 import {News} from './modules/news';
 import {PageMove} from './modules/page-move';
-// import {isWidthChange320, isWidthChange768, isWidthChange1200} from './modules/media-query-list';
-
-const mediaQueryList320 = window.matchMedia('(min-width: 320px) and (max-width: 767px)');
-const mediaQueryList768 = window.matchMedia('(min-width: 768px) and (max-width: 1199px)');
-const mediaQueryList1200 = window.matchMedia('(min-width: 1200px)');
-
-const newsSection = document.querySelector('.news');
-const newsWrapper = document.querySelector('.news__wrapper');
-const newsContainerHidden = document.querySelectorAll('.news__container--hidden');
-const newsWrapElement = document.querySelector('.news__wrap-items');
-const newsButton = document.querySelector('.news__button');
 
 // Полифилл для closest
 (function (ELEMENT) {
@@ -86,6 +75,17 @@ const pageMove = new PageMove({
 
 pageMove.init();
 
+// Брейкпоинты
+const mediaQueryList320 = window.matchMedia('(min-width: 320px) and (max-width: 767px)');
+const mediaQueryList768 = window.matchMedia('(min-width: 768px) and (max-width: 1199px)');
+const mediaQueryList1200 = window.matchMedia('(min-width: 1200px)');
+
+const newsSection = document.querySelector('.news');
+const newsWrapper = document.querySelector('.news__wrapper');
+const newsContainerHidden = document.querySelectorAll('.news__container--hidden');
+const newsWrapElement = document.querySelector('.news__wrap-items');
+const newsButton = document.querySelector('.news__button');
+
 function isWidthChange320(mql) {
   if (mql.matches) {
     if (newsSection && newsSection.classList.contains('news--active')) {
@@ -100,6 +100,9 @@ function isWidthChange320(mql) {
     });
   }
 }
+
+mediaQueryList320.addListener(isWidthChange320);
+isWidthChange320(mediaQueryList320);
 
 function isWidthChange768(mql) {
   if (mql.matches) {
@@ -116,6 +119,9 @@ function isWidthChange768(mql) {
   }
 }
 
+mediaQueryList768.addListener(isWidthChange768);
+isWidthChange768(mediaQueryList768);
+
 function isWidthChange1200(mql) {
   if (mql.matches) {
     if (newsSection && newsSection.classList.contains('news--active')) {
@@ -128,12 +134,6 @@ function isWidthChange1200(mql) {
     }
   }
 }
-
-mediaQueryList320.addListener(isWidthChange320);
-isWidthChange320(mediaQueryList320);
-
-mediaQueryList768.addListener(isWidthChange768);
-isWidthChange768(mediaQueryList768);
 
 mediaQueryList1200.addListener(isWidthChange1200);
 isWidthChange1200(mediaQueryList1200);
